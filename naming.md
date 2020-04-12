@@ -89,4 +89,5 @@ describing their conclusions.
 ------
 Copyright (c) 2020. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Jeremy Avigad, Kevin Kappelmann
+Modified by: Kevin Kappelmann
+Original author: Jeremy Avigad

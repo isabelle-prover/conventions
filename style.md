@@ -290,4 +290,5 @@ Documentation strings for modules are delimited with `/-! -/`.
 ------
 Copyright (c) 2020. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kevin Kappelmann, Jeremy Avigad
+Modified by: Kevin Kappelmann
+Original author: Jeremy Avigad
