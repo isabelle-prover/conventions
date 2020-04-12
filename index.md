@@ -1,8 +1,8 @@
-Commit guidelines
+<!-- Commit guidelines -->
 <!-- Naming conventions -->
 <!-- Theory sectioning guidelines -->
 <!-- Comment guidelines -->
-Session management guidelines
+<!-- Session management guidelines -->
 <!-- References -->
 <!-- Max theory size -->
 
@@ -19,6 +19,7 @@ Many of the following ideas have been adapted from the very successful, communit
 with its [contribution guidelines](https://github.com/leanprover-community/mathlib//blob/master/docs/contribute/).
 
 ## Session Management
+TODO
 
 ## Naming Conventions
 See naming.md
