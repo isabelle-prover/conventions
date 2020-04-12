@@ -1,6 +1,7 @@
 # Isabelle Style Guidelines #
 These conventions are adapted from the
 [mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/style.md).
+to fit for Isabelle conventions.
 
 ## Lines and File length
 - Lines must not be longer than 100 characters

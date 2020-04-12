@@ -1,6 +1,7 @@
 # Isabelle Naming Conventions #
 These conventions are adapted from the
-[mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/naming.md).
+[mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/naming.md)
+to fit for Isabelle conventions.
 
 ## General Conventions ##
 
@@ -88,4 +89,4 @@ describing their conclusions.
 ------
 Copyright (c) 2020. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
-Authors: Kevin Kappelmann, Jeremy Avigad
+Authors: Jeremy Avigad, Kevin Kappelmann

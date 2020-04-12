@@ -1,6 +1,7 @@
 # Isabelle Commit Guidelines #
 These conventions are adapted from the
 [lean commit conventions](https://github.com/leanprover-community/lean/blob/master/doc/commit_convention.md).
+to fit for Isabelle conventions.
 
 We are using the following convention for writing git-commit messages.
 It is based on the one from AngularJS project([doc][angularjs-doc],
