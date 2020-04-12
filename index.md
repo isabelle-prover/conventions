@@ -54,7 +54,7 @@ The file comment consists of the following sections:
 When referring to constants and theorems, antiquotations must be used.
 
 The following is an example of a file header:
-````isabelle
+```isabelle
 ✐‹license "Copyright (c) 2019 Kevin Kappelmann. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE."›
 ✐‹creator "Kevin Kappelmann"›
