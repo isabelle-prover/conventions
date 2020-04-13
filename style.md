@@ -7,6 +7,8 @@ to fit for Isabelle conventions.
 - Lines must not be longer than 100 characters
 - Files must not be longer thatn 1000.
 
+TODO: this file needs to be adapted to Isabelle.
+
 ### Structuring definitions and theorems ###
 
 Use spaces around ":" and infix operators. Put them before a line break rather
