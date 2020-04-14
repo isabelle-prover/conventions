@@ -19,7 +19,7 @@ Many of the following ideas have been adapted from the very successful, communit
 with its [contribution guidelines](https://github.com/leanprover-community/mathlib//blob/master/docs/contribute/).
 
 ## Session Management
-TODO
+See sessions.md
 
 ## Naming Conventions
 See naming.md
