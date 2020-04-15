@@ -3,21 +3,23 @@
 
 ## Naming Conventions ##
 
-- Sessions in the distribution are named with hyphen separated capital words, e.g. `HOL-Analysis`, `HOL-Library`
+- Sessions in the distribution are named with capitalized words separated by hyphens, e.g. `HOL-Analysis`, `HOL-Library`
 
-- Other sessions -- in the AFP and community projects -- are named in Camel Case with underscores, e.g. `Akra_Bazzi`
+- Other sessions -- in the AFP and community projects -- are named in capitalized Snake_Case, e.g. `Akra_Bazzi`
 
-- Theory names: Camel Case with underscores, e.g. `Sepref_All_Examples`
+- Theory names: capitalized Snake_Case, e.g. `Sepref_All_Examples`.
 
-- Constants lower case (e.g. `prime`), Constructors capitalized (e.g. `Suc`, `Cons`, `Leaf`)
+- If theories and sessions are named in this way, imports never need to need quotation marks, i.e. one can write `Akra_Bazzi.Akra_Bazzi` instead of `"Akra_Bazzi"`. Thus the latter form should never be used.
+
+- Constants are written in lower case snake_case (e.g. `prime`), (datatype) constructors are capitalized (e.g. `Suc`, `Cons`, `Leaf`)
 
 - Locales: too complicated for now
 
-## Sessions Discipline
+## Session Discipline
 
-- one session per AFP entry/project is the norm
+- One session per AFP entry/project is the norm
 
-- additional "small sessions" are handy during development and may serve as entry points for sessions that want to base on an session not containing all the theories. Here is an example:
+- Additional "small sessions" are handy during development and may serve as entry points for sessions that want to base on an session not containing all the theories. Here is an example:
 
 ```
 session Project_Name = HOL +
