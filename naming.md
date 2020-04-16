@@ -1,58 +1,66 @@
-# Isabelle Naming Conventions #
+# Isabelle Naming Conventions
+
 These conventions are adapted from the
 [mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/naming.md)
 to fit for Isabelle conventions.
 
-## General Conventions ##
+## Theory Naming
+TODO
 
-Identifiers are generally lower case with underscores. For the most
-part, we rely on descriptive names. Often the name of theorem simply
-describes the conclusion:
+## Theorem Naming
+Every theorem/lemma must be named.
+Identifiers are generally lower case with underscores.
+However, upper case letters are used if it is standard to capitilise a given identifier (e.g. constructors). 
+For the most part, we rely on descriptive names.
+Often the name of theorem simply describes the syntactic structure of the conclusion:
 
-- `succ_ne_zero`
 - `mul_zero`
 - `mul_one`
 - `sub_add_eq_add_sub`
 - `le_iff_lt_or_eq`
+- `Suc_ne_zero`
+- `prime_5`
 
 If only a prefix of the description is enough to convey the meaning,
 the name may be made even shorter:
 
 - `neg_neg`
-- `pred_succ`
+- `pred_Suc`
 
-Sometimes, to disambiguate the name of theorem or better convey the
+Sometimes, to disambiguate the name of a theorem or better convey the
 intended reference, it is necessary to describe some of the
-hypotheses. The word "of" is used to separate these hypotheses:
+hypotheses. The word "if" is used to separate these hypotheses:
 
-- `lt_of_succ_le`
-- `lt_of_not_ge`
-- `lt_of_le_of_ne`
-- `add_lt_add_of_lt_of_le`
+- `lt_if_Suc_le`
+- `lt_if_not_ge`
+- `lt_if_le_if_ne`
+- `add_lt_add_if_lt_if_le`
 
-Sometimes abbreviations or alternative descriptions are easier to work
-with. For example, we use `pos`, `neg`, `nonpos`, `nonneg` rather than
+Sometimes abbreviations or alternative descriptions are easier to work with.
+For example, we use `pos`, `neg`, `nonpos`, `nonneg` rather than
 `zero_lt`, `lt_zero`, `le_zero`, and `zero_le`.
 
 - `mul_pos`
-- `mul_nonpos_of_nonneg_of_nonpos`
-- `add_lt_of_lt_of_nonpos`
-- `add_lt_of_nonpos_of_lt`
+- `mul_nonpos_if_nonneg_if_nonpos`
+- `add_lt_if_lt_if_nonpos`
+- `add_lt_if_nonpos_if_lt`
 
 Sometimes the word "left" or "right" is helpful to describe variants
 of a theorem.
 
 - `add_le_add_left`
 - `add_le_add_right`
-- `le_of_mul_le_mul_left`
-- `le_of_mul_le_mul_right`
+- `le_if_mul_le_mul_left`
+- `le_if_mul_le_mul_right`
 
 We can also use the word "self" to indicate a repeated argument:
 
 - `mul_inv_self`
 - `neg_add_self`
 
-## Axiomatic Descriptions ##
+If a statement is too long, think about creating a definition describing the property.
+
+### Axiomatic Descriptions
 
 Some theorems are described using axiomatic names, rather than
 describing their conclusions.
@@ -73,7 +81,7 @@ describing their conclusions.
 - `mul_right_cancel`
 - `inj`  (injective)
 
-## Names for Symbols ##
+### Names for Symbols
 
 - `imp`: implication
 - `forall`
@@ -81,13 +89,20 @@ describing their conclusions.
 - `ball`: bounded forall
 - `bex`: bounded exists
 
-## Introduction and Elimination Rules ##
+### Introduction, Elimination, Destruction Rules
 
+Intro, elim, and dest rules are identified by a suffix letter:
 - `*I`: introduction rule
 - `*E`: elimination rule
+- `*D`: destruction rule
+
+### Multiple Lemmas
+TODO
 
 ------
 Copyright (c) 2020. All rights reserved.
 Released under Apache 2.0 license as described in the file LICENSE.
+
 Modified by: Kevin Kappelmann
+
 Original author: Jeremy Avigad
