@@ -11,10 +11,6 @@
 
 - If theories and sessions are named in this way, imports never need to need quotation marks, i.e. one can write `Akra_Bazzi.Akra_Bazzi` instead of `"Akra_Bazzi"`. Thus the latter form should never be used.
 
-- Constants are written in lower case snake_case (e.g. `prime`), (datatype) constructors are capitalized (e.g. `Suc`, `Cons`, `Leaf`)
-
-- Locales: too complicated for now
-
 ## Session Discipline
 
 - One session per AFP entry/project is the norm
