@@ -4,11 +4,33 @@ These conventions are adapted from the
 [mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/naming.md)
 to fit for Isabelle conventions.
 
-## Theory Naming
-TODO
+## Folders and Theory Naming
+Projects should be hierarchically structured using folders.
+Theory names are generally captilised with underscores.
+The theory name must describe the main content of the theory.
+Example
+```
+Mathlib
+│   README.md
+│   LICENSE
+│
+└───Algebra
+│   │   Monoids.thy
+│   │   Groups.thy
+│   │   ...
+│   └───Continued_Fractions
+│       │   Continued_Fractions_Basics.thy
+│       │   Continued_Fractions_Recurrence.thy
+│       │   Continued_Fractions_Limits.thy
+│       │   ...
+│ 
+└───Topology
+    │   ...
+...
+```
 
 ## Theorem Naming
-Every theorem/lemma must be named.
+Every theorem/lemma must have a unique name.
 Identifiers are generally lower case with underscores.
 However, upper case letters are used if it is standard to capitilise a given identifier (e.g. constructors). 
 For the most part, we rely on descriptive names.
@@ -95,9 +117,6 @@ Intro, elim, and dest rules are identified by a suffix letter:
 - `*I`: introduction rule
 - `*E`: elimination rule
 - `*D`: destruction rule
-
-### Multiple Lemmas
-TODO
 
 ------
 Copyright (c) 2020. All rights reserved.
