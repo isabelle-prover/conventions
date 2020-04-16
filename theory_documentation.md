@@ -4,11 +4,11 @@ Documentation is key for the long-term value of a development.
 Without documentation, once a project loses its original maintainer(s), the project virtually dies due to inaccessibility.
 In general, all comments must be written using Isabelle markdown (see [Isabelle reference manual](https://isabelle.in.tum.de/documentation.html)).
 
-### References
+## References
 Every project comes with a `.bib` containing the references that were used when developing the theories.
 Those references are then inserted at the appropriate places when documenting the theories.
 
-### Header Documentation
+## Header Documentation
 Every file starts with:
 - a header comment with copyright information
 - the list of imports
@@ -69,7 +69,7 @@ paragraph ‹Tags›
 text ‹numerics, number theory, approximations, fractions›
 ```
 
-### Theory-Body Documentation and Sectioning
+## Theory-Body Documentation and Sectioning
 Every theory should result in a human-readable file. For this, we document and section theories.
 Regarding the former, every definition and every major theorem is required to have an accompanying text-block.
 - For definitions, the block should convey the mathematical meaning and motivation.
