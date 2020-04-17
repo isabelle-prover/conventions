@@ -90,11 +90,11 @@ describing their conclusions.
 - `*_def`  (for unfolding a definition)
 - `refl`
 - `irrefl`
-- `symm`
+- `sym`
 - `trans`
-- `antisymm`
-- `asymm`
-- `congr`
+- `antisym`
+- `asym`
+- `cong`
 - `comm`
 - `assoc`
 - `left_comm`
@@ -106,8 +106,8 @@ describing their conclusions.
 ### Names for Symbols
 
 - `imp`: implication
-- `forall`
-- `exists`
+- `all`
+- `ex`
 - `ball`: bounded forall
 - `bex`: bounded exists
 
