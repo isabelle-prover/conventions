@@ -24,7 +24,8 @@ Facts should be labelled with semantically meaningful names. If the fact is shor
 Here is a valid example:
 ```isabelle
 theorem C_if_complicated_B_if_A:
-    assumes A and complicated_if_A: "A ⟹  complicated B" and c_if_complicated: "complicated B ⟹ C"
+    assumes A and complicated_if_A: "A ⟹  complicated B"
+    and c_if_complicated: "complicated B ⟹ C"
     shows C
       using ‹A› oops
 ```
