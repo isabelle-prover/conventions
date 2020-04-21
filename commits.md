@@ -1,6 +1,6 @@
 # Isabelle Commit Guidelines #
 These conventions are adapted from the
-[lean commit conventions](https://github.com/leanprover-community/lean/blob/master/doc/commit_convention.md)
+[Lean prover commit conventions](https://github.com/leanprover-community/lean/blob/master/doc/commit_convention.md)
 to fit Isabelle conventions.
 
 ## Format of the commit message
