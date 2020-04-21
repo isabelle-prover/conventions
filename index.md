@@ -11,31 +11,31 @@ Many of the following ideas have been adapted from the very successful, communit
 with its [contribution guidelines](https://github.com/leanprover-community/mathlib//blob/master/docs/contribute/).
 
 ## Session Management
-See sessions.md
+See [sessions](sessions.md)
 
 ## Naming Conventions
-See naming.md
+See [naming](naming.md)
 
 ## Style Conventions
-See style.md
+See [style](style.md)
 
 ## Theory Documentation
-see theory_documentation.md
+see [theory documentation](theory_documentation.md)
 
 ## ML Documentation
-see ml_documentation.md
+see [ml documentation](ml_documentation.md)
 
 ## Tactics
-see tactics.md
+see [tactics](tactics.md)
 
 ## Commiting
-see commits.md
+see [commits](commits.md)
 
 ## Pull-Request Management
 TODO
 
 ## Code-Review Checklist
-Same as https://github.com/leanprover-community/mathlib/blob/master/docs/contribute/code-review.md
+Same as [lean code review?](https://github.com/leanprover-community/mathlib/blob/master/docs/contribute/code-review.md)
 
 ## Issues Management
 TODO
