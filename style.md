@@ -131,7 +131,7 @@ The `fixes`, `defines`, and `assumes` of a locale are indented by one level as w
 The initial `begin` must always be followed by a blank line and `end` must be preceded by a blank line.
 Here are two examples:
 ```isabelle
-locale ex1 = import1 + import 2 +
+locale ex1 = import1 + import2 +
   fixes a b :: 'a
   fixes A :: "'a rel"
   assumes "sym A"
