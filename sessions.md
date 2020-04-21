@@ -14,29 +14,10 @@
 
 - One session per project is the norm.
 
-- Each session must come with a `README.md` and `LICENSE` file.
-
-- Additional "small sessions" are handy during development and may serve as entry points for sessions that want to base on an session not containing all the theories. Here is an example:
-
-```
-session Project_Name = HOL +
-  directories
-    "Examples"
-  theories
-    Project_Main
-    "Examples/Project_Name_All_Examples"
-
-(* smaller sessions *)
-session Project_Name_Entry in "Project_Name_Entry" = HOL +
-  sessions
-    Project_Name
-  theories
-    Project_Name.Project_Main
-```
- 
 ## Folders and Theory Naming
 
 Projects should be hierarchically structured using folders.
+Each project must come with a `README.md` and `LICENSE` file.
 Theory names are generally captilised with underscores.
 The theory name must describe the main content of the theory.
 Example
