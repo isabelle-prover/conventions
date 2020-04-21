@@ -3,9 +3,8 @@
 
 ## Naming Conventions ##
 
-- Sessions in the distribution are named with capitalized words separated by hyphens, e.g. `HOL-Analysis`, `HOL-Library`
-
-- Other sessions -- in the AFP and community projects -- are named in capitalized Snake_Case, e.g. `Akra_Bazzi`
+- Sessions the AFP and community projects are named in capitalized Snake_Case, e.g. `Akra_Bazzi`. We follow this convention. 
+  - Note that in the distribution session are named with capitalized words separated by hyphens, e.g. `HOL-Analysis`, `HOL-Library`.
 
 - Theory names: capitalized Snake_Case, e.g. `Sepref_All_Examples`.
 
@@ -13,7 +12,7 @@
 
 ## Session Discipline
 
-- One session per AFP entry/project is the norm
+- One session per project is the norm.
 
 - Additional "small sessions" are handy during development and may serve as entry points for sessions that want to base on an session not containing all the theories. Here is an example:
 
