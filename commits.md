@@ -1,14 +1,7 @@
 # Isabelle Commit Guidelines #
 These conventions are adapted from the
-[lean commit conventions](https://github.com/leanprover-community/lean/blob/master/doc/commit_convention.md).
-to fit for Isabelle conventions.
-
-We are using the following convention for writing git-commit messages.
-It is based on the one from AngularJS project([doc][angularjs-doc],
-[commits][angularjs-git]).
-
-[angularjs-git]: https://github.com/angular/angular.js/commits/master
-[angularjs-doc]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
+[lean commit conventions](https://github.com/leanprover-community/lean/blob/master/doc/commit_convention.md)
+to fit Isabelle conventions.
 
 ## Format of the commit message
 
@@ -29,7 +22,7 @@ It is based on the one from AngularJS project([doc][angularjs-doc],
  - chore (maintain, ex: travis-ci)
  - perf (performance improvement, optimization, ...)
 
-``<scope>`` is a name of module or a directory which contains changed modules. For instance,
+``<scope>`` is a name of theory or a directory which contains changed files. For instance,
 it could be
 
  - continued_fractions/Convergents
@@ -38,17 +31,17 @@ it could be
 
 ``<subject>`` has the following constraints:
 
- - use imperative, present tense: "change" not "changed" nor "changes"
- - do not capitalize the first letter
- - no dot(.) at the end
+ - Use imperative, present tense: "change" not "changed" nor "changes"
+ - Do not capitalize the first letter
+ - No dot(.) at the end
 
 ``<body>`` has the following constraints:
 
- - just as in ``<subject>``, use imperative, present tense
- - includes motivation for the change and contrasts with previous
+ - Just as in ``<subject>``, use imperative, present tense
+ - Includes motivation for the change and contrasts with previous
    behavior
 
-``<footer>`` is optional and may contain two items:
+``<footer>`` is required in either of the following two situations:
 
  - Breaking changes: All breaking changes have to be mentioned in
    footer with the description of the change, justification and
@@ -56,7 +49,7 @@ it could be
  - Referencing issues: Closed bugs should be listed on a separate line
    in the footer prefixed with "Closes" keyword like this:
 
-    Closes #123, #456
+     Closes #123, #456
 
 Example
 ```
