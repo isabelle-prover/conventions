@@ -6,32 +6,35 @@ to fit for Isabelle conventions.
 ## General Rules
 - Lines must not be longer than 100 symbols as indicated by the blue line in jEdit.
 - Files should not be longer than 1500 lines. While this not a hard limit, exceeding this size limit should be seen as an opportunity to evaluate whether it can be sensibly split up.
-- Punctuation (e.g. `,` or `.`) is followed by a space. Use spaces around infix operators and between binders (quantifiers, lambdas). Put them before a line break rather than at the beginning of the next line.
+- Punctuation (e.g. `,` or `.`) is followed by a space. Use spaces around infix operators and between binders (quantifiers, lambdas). If a line has to be broken it is often sensible to put the linebreaks around operators. For a specific operator, it is up to you whether to put it at the end of the line or the beginning of the new line but you should apply your choice consistently. 
 - Use two spaces to indent. You can use an extra indent when a long line forces a break to suggest the break is artificial rather than structural.
-- Use one blank line to separate top-level declarations such as theorems, definitions, datatype declarations, etc. You can group together several closely related top-level declarations by omitting the blank line. 
+- Use one blank line to separate top-level declarations such as theorems, definitions, datatype declarations, etc. You can group together several closely related top-level declarations by omitting the blank line. You may put two blank lines around contexts that are delimited by `begin` and `end`.
 
 ## Comments
-Use comment delimiters `― ‹...›` for comments that are not considered part of the literal document. Applications include TODO notes and comments in an Isar proof.
-Broader comments like motiviations for definitions use the `text` command.
+For comments that are not considered part of the literal document, e.g. TODO notes, use ML-style comments `(* ... *)`.
+Comment delimiters `― ‹...›` are to be used for short inline comments, for example to clarify a proof step.
+Broader comments, i.e. text, like motiviations for definitions use the `text` command.
 
 ## Theorems and Definitions
 The preferred method of stating assumptions is by using explicit `assume` clauses.
+If you use `assume` the theorem name must always be followed by a linebreak.
+Furthermore, the `show` must be on a separate line from the assumptions.
 You can put multiple short assumptions in one line at a time.
-Preferably, you should label facts with semantically meaningful names; numerals are fine for intermediate facts.
-Here are some valid examples:
-
+Facts should be labelled with semantically meaningful names. If the fact is short enough, however, fact quoting should be preferred instead.
+Here is a valid example:
 ```isabelle
-theorem assumes ha: A and b_of_a: "A ⟹ B" and c_of_b: "B ⟹ C" shows C
-oops
+theorem C_if_complicated_B_if_A:
+    assumes A and complicated_if_A: "A ⟹  complicated B" and c_if_complicated: "complicated B ⟹ C"
+    shows C
+      using ‹A› oops
+```
 
-theorem assumes A "A ⟹ B" "B ⟹ C" shows C
-oops
-
-theorem assumes ha: A
-  and b_of_a: "A ⟹ B"
-  and c_of_b: "B ⟹ C"
-  shows C
-oops
+If you prove involved existential statements or case distinctions you should write down the theorem using `obtains`, e.g:
+```isabelle
+theorem empty_or_infinite_if_card_eq_0:
+  assumes "card A = 0"
+  obtains (empty) "A = {}" | (infinite) B where "B ⊆ A" "¬ finite B"
+    oops
 ```
 
 ## Proofs
@@ -47,7 +50,6 @@ next
 qed
 ```
 A `from` / `have` / `using` / `unfolding` / `by` combination can be put on the same line.
-You can also put each of these blocks in a new line if the text is too long, but add an extra indentation in that case.
 If you need more than two lines, then then `from` and `have` should be aligned while the `using` / `unfolding` / `by` commands are aligned to one extra indentation with respect to the `have` block. 
 If you have to break within one of the blocks, add another extra indentation.
 
@@ -89,44 +91,69 @@ Facts that are crucial to the understand of a step should be put in the `from` c
 Auxiliary facts can be put in the trailing using block or passed as tactic arguments.
 
 ### Calculations
-Use calculation proofs when doing transitive reasoning. Example:
+Use calculation proofs when doing transitive reasoning. The transitive operator, `=` in the following example, must not be manually aligned:
 ```isabelle
-theorem add_comm: "(n :: nat) + m = m + n"
-proof (induction n)
-  case 0
-  show ?case using add_zero zero_add by simp
-next
-  case (Suc n)
-  have "Suc n + m = Suc (n + m)" by (fact succ_add)
-  also have "... = Suc (m + n)" using Suc.IH by clarify
-  also have "... = Suc m + n" by (fact succ_add[symmetric])
-  also have "... = m + Suc n" by (fact succ_add_eq_add_succ)
-  finally show ?case by clarify
+lemma "((a::nat) + b) + c = c + (b + a)"
+proof -
+  have "(a + b) + c = (b + a) + c"  by simp
+  also have "… = c + (b + a)" by simp
+  finally show ?thesis by simp
 qed
 ```
 
 ## Datatype and function definitions
-The indentation of datatype and function definitions follows the rule to put operators at the end of the line.
-This means that the `where` command should be on the same line as the declaration, or, if this is not possible, it goes onto the next line with an extra indentation.
-Furthermore, the seperating `|` between several equations is put at the end of the line and the equations are aligned to one extra indentation.
+While each equation of a function definition must be on a separate line, a datatype declaration may be put on a single line if it is short enough.
+The seperating `|` between several equations is put at beginning of the line without indentation. By seperating the constructor respectively equation by one space, the usual indentation of two spaces is achieved.
+The `where` command for definition should be on the same line as the declaration, or, if this is not possible, it goes onto the next line with an extra indentation.
 If the right-hand side of an equation has to be broken because it is too long, then it is shifted by one indentation plus one space (to account for the `"`) to the right.
 Linebreaks within the right-hand side recursively add one indentation. 
 
 Example:
 ```isabelle
 datatype 'a list =
-  Nil |
-  Cons 'a "'a list"
+  Nil
+| Cons 'a "'a list"
 
 function list_update :: "'a list ⇒ nat ⇒ 'a ⇒ 'a list" where
-  "list_update [] i v = []" |
-  "list_update (x # xs) i v =
-    (case i of
-      0 ⇒ v # xs |
-      Suc j ⇒ x # list_update xs j v
+  "list_update [] i v = []"
+| "list_update (x # xs) i v = (
+    case i of
+      0 ⇒ v # xs
+    | Suc j ⇒ x # list_update xs j v
     )"
 ```
 
+## Locales
+The imports of a locale go on the same line as the locale declaration, or, if the line has to be broken, they are indented by one level.
+Here, the `+`s that separate the imports always are at the end of the line.
+The `fixes`, `defines`, and `assumes` of a locale are indented by one level as well.
+The initial `begin` must always be followed by a blank line and `end` must be preceded by a blank line.
+Here are two examples:
+```isabelle
+locale ex1 = import1 + import 2 +
+  fixes a b :: 'a
+  fixes A :: "'a rel"
+  assumes "sym A"
+  assumes "(a, b) ∈ A"
+begin
+
+lemma "(b, a) ∈ A"
+  oops
+
+end
+ 
+
+locale ex2 =
+  import1 +
+  this_is_a_very_long_import +
+  fixes a :: 'a
+begin
+
+lemma "a ∈ UNIV"
+  oops
+
+end
+```
 
 ------
 Copyright (c) 2020. All rights reserved.
