@@ -5,7 +5,7 @@ to fit Isabelle conventions.
 
 ## Format of the commit message
 
-    <type>(<scope>): <subject>
+    <type>(<scope>) <subject>
     <NEWLINE>
     <body>
     <NEWLINE>
