@@ -21,6 +21,6 @@ The guidelines cover the following topics:
 - [Notation](notation.md)
 - [Session Management](sessions.md)
 - [Tactics](tactics.md)
-- [Committing](commits.md)
 - [ML Documentation](ml_documentation.md)
-- Pull-Request Management
+- [Committing](commits.md)
+- [Pull-Request Management](pull_requests.md)
