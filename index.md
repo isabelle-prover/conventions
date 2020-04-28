@@ -32,11 +32,10 @@ see [tactics](tactics.md)
 see [commits](commits.md)
 
 ## Pull-Request Management
-TODO
-
-## Code-Review Checklist
-Same as [lean code review?](https://github.com/leanprover-community/mathlib/blob/master/docs/contribute/code-review.md)
+see [pull requests](pull_requests.md)
 
 ## Issues Management
 TODO
 
+## Continous Integration
+TODO

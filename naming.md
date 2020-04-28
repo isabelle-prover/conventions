@@ -1,8 +1,7 @@
 # Isabelle Naming Conventions
 
 These conventions are adapted from the
-[mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/naming.md)
-to fit for Isabelle conventions.
+[mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/naming.md).
 
 ## Theorem Naming
 Every theorem/lemma must have a unique name.

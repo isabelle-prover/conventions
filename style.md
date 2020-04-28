@@ -1,7 +1,6 @@
 # Isabelle Style Guidelines #
 These conventions are adapted from the
 [mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/style.md).
-to fit for Isabelle conventions.
 
 ## General Rules
 - Lines must not be longer than 100 symbols as indicated by the blue line in jEdit.
