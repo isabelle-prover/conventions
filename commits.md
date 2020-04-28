@@ -7,8 +7,7 @@ These conventions are adapted from the
 1. Every commit must be small and self-contained.
 If you have made a lot of changes/additions, split them into modular, smaller changesets.
 This makes it easier for you and other contributors to merge changes and understand the development process.
-2. Every commit must compile and contain no `sorry`s.
-If possible, install a continous integration process for your project and integrate these checks.
+2. Every commit must compile. If possible, install a continous integration process for your project and integrate this check.
 3. Adhere to the commit message format explained below.
 
 ## Format of The Commit Message
