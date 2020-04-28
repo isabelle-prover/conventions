@@ -20,6 +20,6 @@ The guidelines are split into the following topics:
 - [Session Management](sessions.md)
 - [Theorem Attributes](rule_attributes.md)
 - [Tactics](tactics.md)
-- [Commiting](commits.md)
+- [Committing](commits.md)
 - [ML Documentation](ml_documentation.md)
 - Pull-Request Management
