@@ -22,19 +22,19 @@ Prefer to use templates (like `infix`, `infixl`, `infixr` for binary operators)!
   - For syntax notations _always_ provide both a bundle that enables it (`CONCEPT_syntax`) and a bundle that disables it (`no_CONCEPT_syntax`),
   e.g.:
 
-  ```
-  bundle timecredits_syntax
-  begin
-  notation
-    timecredit_assn ("$")
-  end
+```
+bundle timecredits_syntax
+begin
+notation
+  timecredit_assn ("$")
+end
 
-  bundle no_timecredits_syntax
-  begin
-  no_notation
-    timecredit_assn ("$")
-  end
-  ```
+bundle no_timecredits_syntax
+begin
+no_notation
+  timecredit_assn ("$")
+end
+```
 
   - Only when the notation is specific enough (e.g. by a subscript) to rule out clashes with notation from other theories or future developments the its bundle can be unbundled on the toplevel. But a bundle for disabling the notation should always be available.
 
