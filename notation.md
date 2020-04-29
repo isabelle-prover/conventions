@@ -21,7 +21,6 @@ Prefer to use templates (like `infix`, `infixl`, `infixr` for binary operators)!
 
   - For syntax notations _always_ provide both a bundle that enables it (`CONCEPT_syntax`) and a bundle that disables it (`no_CONCEPT_syntax`),
   e.g.:
-
 ```
 bundle timecredits_syntax
 begin
