@@ -12,16 +12,17 @@ Here are some tips and tricks to make the process of contributing as smooth as p
 2. Discuss your contribution before and while you are working on it.
 Create an issue to discuss your general ideas and questions.
 For more detailed and longer conversations, you could also make use of [Isabelle's Zulip](https://isabelle.zulipchat.com/).
-3. Create a pull request from a feature branch on your personal fork,
+4. Use /<path to isabelle>/bin/isabelle build -D . to check if your project compiles before sending a PR
+5. Create a pull request from a feature branch on your personal fork,
    as explained in the link above, or from a branch of the main repository if you have commit access.
-4. If you have made a lot of changes/additions, make many PRs containing small, self-contained
+6. If you have made a lot of changes/additions, make many PRs containing small, self-contained
    pieces. This helps you get feedback as you go along, and it is much easier to review. This is
    especially important for new contributors.
-5. Answer the following three questions in your PR:
+7. Answer the following three questions in your PR:
   1. What: What is this PR about?
   2. Why: Why is this PR useful/what is the problem you solve?
   3. How: How did you create the feature/solve the problem?
-6. As for [commits](commits.md), bugs closed by the PR should be listed on a separate line
+8. As for [commits](commits.md), bugs closed by the PR should be listed on a separate line
 in the footer prefixed with "Closes".
 
 ## Code-Review Checklist
