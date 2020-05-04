@@ -94,19 +94,27 @@ paragraph ‹Generalised Continued Fractions›
 text ‹
 A ∗‹generalised continued fraction› (gcf) is a potentially infinite expression
 of the form
+
+\begin{equation*}
+h+\cfrac{a_0}
+  {b_0+\cfrac{a_1}
+    {b_1+\cfrac{a_2}
+      {b_2+\cfrac{a_3}
+        {b_3+\dotsb}}}}
+\end{equation*}
 ›
 
-text_raw ‹
-                                a₀
-                h + --------------------------
-                                  a₁
-                      b₀ + --------------------
-                                    a₂
-                            b₁ + --------------
-                                        a₃
-                                  b₂ + --------
-                                      b₃ + ...
-›
+(* Above code produces:
+                a₀
+h + ---------------------------
+                  a₁
+      b₀ + --------------------
+                    a₂
+            b₁ + --------------
+                        a₃
+                  b₂ + --------
+                      b₃ + ...
+*)
 
 text ‹where ‹h› is called the ∗‹head term› or ∗‹integer part›, the ‹a⇘is⇙› are
 called the ∗‹partial numerators› and the ‹b⇘is⇙› the ∗‹partial denominators› of the
