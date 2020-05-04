@@ -1,6 +1,4 @@
 # Isabelle Community Pull Request Management
-These conventions are adapted from the
-[Lean prover contribution conventions](https://github.com/leanprover-community/mathlib/blob/master/docs/contribute/index.md).
 
 ## Creating a Pull Request
 

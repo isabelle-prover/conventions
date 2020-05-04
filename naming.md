@@ -1,8 +1,5 @@
 # Isabelle Naming Conventions
 
-These conventions are adapted from the
-[mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/naming.md).
-
 ## Theorem Naming
 Every theorem/lemma must have a unique name.
 Identifiers are generally lower case with underscores.
@@ -91,11 +88,3 @@ Intro, elim, and dest rules are identified by a suffix letter:
 - `*I`: introduction rule
 - `*E`: elimination rule
 - `*D`: destruction rule
-
-------
-Copyright (c) 2020. All rights reserved.
-Released under Apache 2.0 license as described in the file LICENSE.
-
-Modified by: Kevin Kappelmann
-
-Original author: Jeremy Avigad

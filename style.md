@@ -1,6 +1,4 @@
 # Isabelle Style Guidelines #
-These conventions are adapted from the
-[mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/style.md).
 
 ## General Rules
 - Lines must not be longer than 100 symbols as indicated by the blue line in jEdit.
@@ -155,10 +153,3 @@ lemma "a ∈ UNIV"
 end
 ```
 
-------
-Copyright (c) 2020. All rights reserved.
-Released under Apache 2.0 license as described in the file LICENSE.
-
-Modified by: Kevin Kappelmann
-
-Original author: Jeremy Avigad

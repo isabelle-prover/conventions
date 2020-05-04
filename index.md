@@ -7,9 +7,6 @@ This might seem like a lot of work at first, but this is just a short-termed obj
 2. easy collaboration due to 1. (searchability, uniformity) and a flexible as well as transparent contribution model
 3. quicker development in the mid-term and long-term due 1. and 2.
 
-Many of the following ideas have been adapted from the very successful, community-driven [mathlib project](https://github.com/leanprover-community/mathlib/) for Lean
-with its [contribution guidelines](https://github.com/leanprover-community/mathlib//blob/master/docs/contribute/).
-
 ## Session Management
 See [sessions](sessions.md)
 
@@ -39,3 +36,6 @@ TODO
 
 ## Continous Integration
 TODO
+
+Many of these guidelines have been adapted from the very successful Lean mathlib
+[contribution guidelines](https://github.com/leanprover-community/mathlib//blob/master/docs/contribute/).
