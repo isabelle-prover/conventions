@@ -71,8 +71,7 @@ proof (induction "f`A" arbitrary: A rule: finite_induct)
   then show ?case by simp
 next
   case (insert b F)
-  note IH = ‹⋀A. ⟦F = f`A; infinite A⟧
-    ⟹ ∃ a ∈ A. infinite {a' ∈ A. f a' = f a}›
+  ― ‹the pre-image of b›
   let ?Pb = "{a ∈ A. f a = b}"
   show ?case
   proof (cases "finite ?Pb")
@@ -83,7 +82,7 @@ next
       by blast
     ultimately have "infinite {a ∈ A. f a ≠ b}"
       by simp
-    from IH[OF _ this] insert.hyps
+    from insert.IH[OF _ this] insert.hyps
     show ?thesis
       using rev_finite_subset
       by blast 
