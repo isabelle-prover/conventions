@@ -61,7 +61,8 @@ When arguments themselves are long enough to require line breaks, use an additio
 
 Here is an example:
 ```isabelle
-lemma pigeonhole_infinite: assumes inf_domain: "infinite A"
+lemma pigeonhole_if_infinite_domain:
+  assumes inf_domain: "infinite A"
   and finite_range: "finite (f`A)"
   shows "∃ a ∈ A. infinite {a' ∈ A. f a' = f a}"
 using finite_range inf_domain
@@ -72,21 +73,26 @@ next
   case (insert b F)
   note IH = ‹⋀A. ⟦F = f`A; infinite A⟧
     ⟹ ∃ a ∈ A. infinite {a' ∈ A. f a' = f a}›
-  ― ‹the pre-image of b›
   let ?Pb = "{a ∈ A. f a = b}"
   show ?case
   proof (cases "finite ?Pb")
     case True
-    with ‹infinite A› have "infinite (A - ?Pb)" by simp
-    moreover have "A - ?Pb = {a ∈ A. f a ≠ b}" by blast
-    ultimately have "infinite {a ∈ A. f a ≠ b}" by simp
-    from IH[OF _ this] insert.hyps show ?thesis
+    with ‹infinite A› have "infinite (A - ?Pb)"
+      by simp
+    moreover have "A - ?Pb = {a ∈ A. f a ≠ b}"
+      by blast
+    ultimately have "infinite {a ∈ A. f a ≠ b}"
+      by simp
+    from IH[OF _ this] insert.hyps
+    show ?thesis
       using rev_finite_subset
       by blast 
   next
     case False
-    then have "?Pb ≠ {}" by force
-    with False show ?thesis by blast
+    then have "?Pb ≠ {}" 
+      by force
+    with False show ?thesis
+      by blast
   qed
 qed
 ```
