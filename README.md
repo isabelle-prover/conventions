@@ -1,5 +1,6 @@
 ---
 title: Isabelle Community Contribution Guidelines
+permalink: /
 ---
 
 This repository contains style guidelines for the development of projects with the [Isabelle](https://isabelle.in.tum.de) proof assistant.
