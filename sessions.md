@@ -1,5 +1,6 @@
-# Isabelle Community Sessions Conventions #
-
+---
+title: Sessions
+---
 
 ## Naming Conventions ##
 

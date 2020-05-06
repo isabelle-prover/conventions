@@ -1,4 +1,6 @@
-# Isabelle Style Guidelines #
+---
+title: Style
+---
 
 ## General Rules
 

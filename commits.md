@@ -1,4 +1,7 @@
-# Isabelle Commit Guidelines #
+---
+title: Commits
+---
+
 These conventions are adapted from the
 [Lean prover commit conventions](https://github.com/leanprover-community/lean/blob/master/doc/commit_convention.md).
 

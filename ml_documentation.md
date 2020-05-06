@@ -1,4 +1,7 @@
-# ML documentation
+---
+title: ML documentation
+---
+
 TODO: this is just a stub.
 
 Undocumented ML-code - or code in general - is virtually incomprehensible.

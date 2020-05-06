@@ -1,4 +1,6 @@
-# Rule Attributes #
+---
+title: Rule Attributes
+---
 
 Attributes modify theorems in various ways in Isabelle.
 Most of the important ones simply add some sort of tag to the theorem that will be picked up by other tools.

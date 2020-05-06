@@ -1,4 +1,6 @@
-# Isabelle Naming Conventions
+---
+title: Naming Conventions
+---
 
 ## Theorem Naming
 Every theorem/lemma must have a unique name.
