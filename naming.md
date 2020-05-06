@@ -1,4 +1,6 @@
-# Isabelle Naming Conventions
+---
+title: Naming Conventions
+---
 
 These conventions are adapted from the
 [mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/naming.md)
