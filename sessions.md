@@ -4,7 +4,7 @@ title: Sessions
 
 ## Naming Conventions ##
 
-- Sessions the AFP and community projects are named in capitalized Snake_Case, e.g. `Akra_Bazzi`. We follow this convention. 
+- Sessions in the AFP and community projects are named in capitalized Snake_Case, e.g. `Akra_Bazzi`. We follow this convention. 
   - Note that in the distribution session are named with capitalized words separated by hyphens, e.g. `HOL-Analysis`, `HOL-Library`.
 
 - Theory names: capitalized Snake_Case, e.g. `Sepref_All_Examples`.

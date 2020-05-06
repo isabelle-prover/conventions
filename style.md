@@ -2,16 +2,18 @@
 title: Style
 ---
 
-These conventions are adapted from the
-[mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/style.md).
-to fit for Isabelle conventions.
-
 ## General Rules
-- Lines must not be longer than 100 symbols as indicated by the blue line in jEdit.
+
+### Linting
+- Lines must not be longer than 100 symbols (as indicated by the blue line in jEdit).
 - Files should not be longer than 1500 lines. While this not a hard limit, exceeding this size limit should be seen as an opportunity to evaluate whether it can be sensibly split up.
 - Punctuation (e.g. `,` or `.`) is followed by a space. Use spaces around infix operators and between binders (quantifiers, lambdas). If a line has to be broken it is often sensible to put the linebreaks around operators. For a specific operator, it is up to you whether to put it at the end of the line or the beginning of the new line but you should apply your choice consistently. 
 - Use two spaces to indent. You can use an extra indent when a long line forces a break to suggest the break is artificial rather than structural.
 - Use one blank line to separate top-level declarations such as theorems, definitions, datatype declarations, etc. You can group together several closely related top-level declarations by omitting the blank line. You may put two blank lines around contexts that are delimited by `begin` and `end`.
+
+### "Do Nots"
+- Do not use indexed access to fact collections, e.g. `algebra_simps(3)`.
+- In procedural proofs, try to not apply tactics in the middle of a proof if they do not close a goal and do not give raise to a canonical.
 
 ## Comments
 For comments that are not considered part of the literal document, e.g. TODO notes, use ML-style comments `(* ... *)`.
@@ -61,7 +63,8 @@ When arguments themselves are long enough to require line breaks, use an additio
 
 Here is an example:
 ```isabelle
-lemma pigeonhole_infinite: assumes inf_domain: "infinite A"
+lemma pigeonhole_if_infinite_domain:
+  assumes inf_domain: "infinite A"
   and finite_range: "finite (f`A)"
   shows "∃ a ∈ A. infinite {a' ∈ A. f a' = f a}"
 using finite_range inf_domain
@@ -70,23 +73,27 @@ proof (induction "f`A" arbitrary: A rule: finite_induct)
   then show ?case by simp
 next
   case (insert b F)
-  note IH = ‹⋀A. ⟦F = f`A; infinite A⟧
-    ⟹ ∃ a ∈ A. infinite {a' ∈ A. f a' = f a}›
   ― ‹the pre-image of b›
   let ?Pb = "{a ∈ A. f a = b}"
   show ?case
   proof (cases "finite ?Pb")
     case True
-    with ‹infinite A› have "infinite (A - ?Pb)" by simp
-    moreover have "A - ?Pb = {a ∈ A. f a ≠ b}" by blast
-    ultimately have "infinite {a ∈ A. f a ≠ b}" by simp
-    from IH[OF _ this] insert.hyps show ?thesis
+    with ‹infinite A› have "infinite (A - ?Pb)"
+      by simp
+    moreover have "A - ?Pb = {a ∈ A. f a ≠ b}"
+      by blast
+    ultimately have "infinite {a ∈ A. f a ≠ b}"
+      by simp
+    from insert.IH[OF _ this] insert.hyps
+    show ?thesis
       using rev_finite_subset
       by blast 
   next
     case False
-    then have "?Pb ≠ {}" by force
-    with False show ?thesis by blast
+    then have "?Pb ≠ {}" 
+      by force
+    with False show ?thesis
+      by blast
   qed
 qed
 ```
@@ -159,10 +166,3 @@ lemma "a ∈ UNIV"
 end
 ```
 
-------
-Copyright (c) 2020. All rights reserved.
-Released under Apache 2.0 license as described in the file LICENSE.
-
-Modified by: Kevin Kappelmann
-
-Original author: Jeremy Avigad
