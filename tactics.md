@@ -1,4 +1,7 @@
-# Tactics Guidelines
+---
+title: Tactics
+---
+
 TODO
 
 Besides the documentation and style guidelines mentioned in other files,

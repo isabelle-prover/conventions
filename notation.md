@@ -1,4 +1,6 @@
-# Isabelle Guidelines for Notation #
+---
+title: Notation
+---
 
 - Notation can be introduced in Isabelle for both types and terms. 
 Notation for a constant can be introduced where it is defined, later with an explicit notation (`type_notation`, `notation`), or locally in an Isar proof (`write`).

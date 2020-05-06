@@ -1,6 +1,5 @@
-
 ---
-title: Session Conventions
+title: Sessions
 ---
 
 ## Naming Conventions ##

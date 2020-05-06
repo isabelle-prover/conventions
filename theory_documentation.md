@@ -1,4 +1,6 @@
-# Theory Documentation
+---
+title: Theory Documentation
+---
 
 Documentation is key for the long-term value of a development.
 Without documentation, once a project loses its original maintainer(s), the project virtually dies due to inaccessibility.

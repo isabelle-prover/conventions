@@ -1,4 +1,6 @@
-# ML documentation
+---
+title: ML documentation
+---
 
 Undocumented ML-code - or code in general - is virtually incomprehensible.
 Here are some guidelines for good code:

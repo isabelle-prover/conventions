@@ -1,4 +1,7 @@
-# Isabelle Style Guidelines #
+---
+title: Style
+---
+
 These conventions are adapted from the
 [mathlib naming convention](https://github.com/leanprover-community/mathlib/edit/master/docs/contribute/style.md).
 to fit for Isabelle conventions.

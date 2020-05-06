@@ -1,4 +1,6 @@
-# Rule Attributes #
+---
+title: Rule Attributes
+---
 
 Attributes modify theorems in various ways in Isabelle. Most of the most important ones simply add some sort of tag to the theorem that will be picked up by other tools. The most common and important ones in Isabelle/HOL are the ones that declare that a theorem should be used by Isabelle's general-purpose automation: `simp`, `intro`, `dest`, `elim`, and `iff`.
 
