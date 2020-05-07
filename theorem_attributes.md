@@ -13,7 +13,7 @@ This affects methods such as `simp`, `auto`, `force`, `fastforce` that make use 
 - Theorems tagged with `intro`, `dest`, `elim` are used by the *classical reasoner*.
 This affects methods such as `auto`, `blast`, `force`, `fastforce`.
 
-– `iff` can be applied to theorems stating a logical equivalence and declares that the theorem should be used both by the simplifier and by the classical reasoner.
+- `iff` can be applied to theorems stating a logical equivalence and declares that the theorem should be used both by the simplifier and by the classical reasoner.
 
 For more details on this and other attributes, see the [isar-ref](https://isabelle.in.tum.de/dist/doc/isar-ref.pdf).
 
