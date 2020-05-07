@@ -1,5 +1,5 @@
 ---
-title: Rule Attributes
+title: Theorem Attributes
 ---
 
 Attributes modify theorems in various ways in Isabelle.

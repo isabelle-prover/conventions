@@ -21,9 +21,9 @@ add a comment with a reference to some textbook, paper or Wikipedia entry to bac
 
   - An example can be found in `HOL-Analysis.Finite_Cartesian_Product` (`vec_syntax`, `no_vec_syntax`)
 
-  - For syntax notations _always_ provide both a bundle that enables it (`CONCEPT_syntax`) and a bundle that disables it (`no_CONCEPT_syntax`),
-  e.g.:
-```
+  - For syntax notations _always_ provide both a bundle that enables it (`CONCEPT_syntax`) and a bundle that disables it (`no_CONCEPT_syntax`), e.g.:
+
+``` isabelle
 bundle timecredits_syntax
 begin
 notation
