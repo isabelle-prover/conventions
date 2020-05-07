@@ -33,7 +33,7 @@ As for more specific guidelines:
 - Good automation rules should generally perform relatively obvious steps that do not *surprise* the user.
 - Classical rules and conditional `simp` rules typically involve some sort of backtracking.
 If this backtracking sends the automation down a wrong path, it can slow them down significantly.
-- Anyt unconditional equation where the left-hand side should clearly be rewritten to the right-hand side should probably be a simp rule (e.g. `x + 0 = x`).
+- Any unconditional equation where the left-hand side should clearly be rewritten to the right-hand side should probably be a simp rule (e.g. `x + 0 = x`).
 - This also applies for conditional equations as long as the tradeoff between how complicated the precondition, how often the rule can apply syntactically, and how often the rule will actually apply works out (e.g. `x ≠ 0 ⟹ a * x = b * x ⟷ a = b`).
 - For distributivity rules of the form `f (g x) = g (f x)` or `f (g x) (g y) = g (f x y)`, it is not immediately clear which way around they should be applied.
 These *can* be turned into simp rules, but the choice of whether `f` (resp. `g`) should be ‘pulled out’ or ‘pushed in’ should be consistent for *all* simp rules involving `f` (resp. `g`).
