@@ -21,8 +21,8 @@ Comment delimiters `― ‹...›` are to be used for short inline comments, for
 Broader comments, i.e. text, like motiviations for definitions use the `text` command.
 
 ## Theorems and Definitions
-The preferred method of stating assumptions is by using explicit `assume` clauses.
-If you use `assume` the theorem name must always be followed by a linebreak.
+The preferred method of stating assumptions is by using explicit `assumes` clauses.
+If you use `assumes` the theorem name must always be followed by a linebreak.
 Furthermore, the `show` must be on a separate line from the assumptions.
 You can put multiple short assumptions in one line at a time.
 Facts should be labelled with semantically meaningful names. If the fact is short enough, however, fact quoting should be preferred instead.
@@ -56,7 +56,7 @@ next
 qed
 ```
 A `from` / `have` / `using` / `unfolding` / `by` combination can be put on the same line.
-If you need more than two lines, then then `from` and `have` should be aligned while the `using` / `unfolding` / `by` commands are aligned to one extra indentation with respect to the `have` block. 
+If you need more than two lines, then `from` and `have` should be aligned while the `using` / `unfolding` / `by` commands are aligned to one extra indentation with respect to the `have` block. 
 If you have to break within one of the blocks, add another extra indentation.
 
 When arguments themselves are long enough to require line breaks, use an additional indent for the new lines.
@@ -114,7 +114,7 @@ qed
 
 ## Datatype and function definitions
 While each equation of a function definition must be on a separate line, a datatype declaration may be put on a single line if it is short enough.
-The seperating `|` between several equations is put at beginning of the line without indentation. By seperating the constructor respectively equation by one space, the usual indentation of two spaces is achieved.
+The seperating `|` between several equations is put at the beginning of the line without indentation. By seperating the constructor respectively equation by one space, the usual indentation of two spaces is achieved.
 The `where` command for definition should be on the same line as the declaration, or, if this is not possible, it goes onto the next line with an extra indentation.
 If the right-hand side of an equation has to be broken because it is too long, then it is shifted by one indentation plus one space (to account for the `"`) to the right.
 Linebreaks within the right-hand side recursively add one indentation. 
