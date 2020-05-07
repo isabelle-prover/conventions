@@ -18,7 +18,7 @@ The guidelines cover the following topics:
 - [Naming Conventions](naming.md)
 - [Style Conventions](style.md)
 - [Theory Documentation](theory_documentation.md)
-- [Theorem Attributes](rule_attributes.md)
+- [Theorem Attributes](theorem_attributes.md)
 - [Notation](notation.md)
 - [Session Management](sessions.md)
 - [Committing](commits.md)
