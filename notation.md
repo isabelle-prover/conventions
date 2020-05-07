@@ -21,6 +21,8 @@ add a comment with a reference to some textbook, paper or Wikipedia entry to bac
 
   - An example can be found in `HOL-Analysis.Finite_Cartesian_Product` (`vec_syntax`, `no_vec_syntax`)
 
+  - A bundle can be unbundled on the toplevel only when the notation is specific enough (e.g. by a subscript) to rule out clashes with notation from other theories or future developments. A bundle for disabling the notation must be available regardless.
+  
   - For syntax notations _always_ provide both a bundle that enables it (`CONCEPT_syntax`) and a bundle that disables it (`no_CONCEPT_syntax`), e.g.:
 
 ``` isabelle
@@ -36,6 +38,4 @@ no_notation
   timecredit_assn ("$")
 end
 ```
-
-- A bundle can be unbundled on the toplevel only when the notation is specific enough (e.g. by a subscript) to rule out clashes with notation from other theories or future developments. A bundle for disabling the notation must be available regardless.
 
