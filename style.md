@@ -13,7 +13,7 @@ title: Style
 
 ### "Do Nots"
 - Do not use indexed access to fact collections, e.g. `algebra_simps(3)`.
-- In procedural proofs, try to not apply tactics in the middle of a proof if they do not close a goal and do not give raise to a canonical.
+- In procedural proofs, try to not apply tactics in the middle of a proof if they do not close a goal and do not give raise to a normal form.
 
 ## Comments
 For comments that are not considered part of the literal document, e.g. TODO notes, use ML-style comments `(* ... *)`.
@@ -98,7 +98,7 @@ next
 qed
 ```
 
-Facts that are crucial to the understand of a step should be put in the `from` clause of a step.
+Facts that are crucial to the understanding of a step should be put in the `from` clause of a step.
 Auxiliary facts can be put in the trailing using block or passed as tactic arguments.
 
 ### Calculations
