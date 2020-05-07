@@ -1,4 +1,6 @@
-# Isabelle Community Pull Request Management
+---
+title: Isabelle Community Pull Request Management
+---
 
 ## Creating a Pull Request
 
