@@ -85,7 +85,7 @@ For clarity, minor technicalities need not be mentioned (e.g. divisions by zero)
 - For major theorems, the block should address the importance and re-usability of the theorem.
 - When referring to constants (`@const`), terms (`@term`), types (`@typ`), theorems (`@thm`) etc., antiquotations must be used. In particular, for constants, `@const` must be preferred over `@term`.
 
-Moroever, the theory should be sectioned using the `chapter`, `section`, `subsection`, `paragraph`, etc. commands.
+Moreover, the theory should be sectioned using the `chapter`, `section`, `subsection`, `paragraph`, etc. commands.
 If a new section starts at the start of a theory, the corresponding sectioning command should go before the theory header.
 Explanatory text that motivates and guides the user through the theory development should be added. 
 
