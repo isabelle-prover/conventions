@@ -26,7 +26,7 @@ The guidelines cover the following topics:
 - [Tactics](tactics.md)
 - [ML Documentation](ml_documentation.md)
 
-## Get Help
+## Get Help and Join The Community
 This [zulip chat](https://isabelle.zulipchat.com/) is where some of the Isabelle community, in particular the creators of these guidelines, hang out.
 We are always happy to help you and try to answer your questions, no matter if they are basic or advanced.
 
