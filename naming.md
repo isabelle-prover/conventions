@@ -90,3 +90,6 @@ Intro, elim, and dest rules are identified by a suffix letter:
 - `*I`: introduction rule
 - `*E`: elimination rule
 - `*D`: destruction rule
+
+## Locale naming
+The naming of locales follows the convention in the distribution, i.e. we use `lower_case_snake_case`.
