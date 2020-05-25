@@ -18,11 +18,15 @@ title: Style
 ## Comments
 For comments that are not considered part of the literal document, e.g. TODO notes, use ML-style comments `(* ... *)`.
 Comment delimiters `― ‹...›` are to be used for short inline comments, for example to clarify a proof step.
-Broader comments, i.e. text, like motiviations for definitions use the `text` command.
+For broader comments, like motiviations for definitions, use the `text` command. See also [Theory Documentation](theory_documentation.md).
 
 ## Theorems and Definitions
-The preferred method of stating assumptions is by using explicit `assumes` clauses.
-If you use `assumes` the theorem name must always be followed by a linebreak.
+The preferred method of stating assumptions is by using explicit `assumes` clauses;
+however, this is just a suggestion.
+You are free to state your assumptions using meta level implication if it reduces textual noise
+or simplifies the proof body.
+
+If you use `assumes`, the theorem name must always be followed by a linebreak.
 Furthermore, the `show` must be on a separate line from the assumptions.
 You can put multiple short assumptions in one line at a time.
 Facts should be labelled with semantically meaningful names. If the fact is short enough, however, fact quoting should be preferred instead.
@@ -114,12 +118,27 @@ qed
 
 ## Datatype and function definitions
 While each equation of a function definition must be on a separate line, a datatype declaration may be put on a single line if it is short enough.
-The seperating `|` between several equations is put at the beginning of the line without indentation. By seperating the constructor respectively equation by one space, the usual indentation of two spaces is achieved.
-The `where` command for definition should be on the same line as the declaration, or, if this is not possible, it goes onto the next line with an extra indentation.
+The separating `|` between several equations is either consistently put at the beginning of the line without indentation or at the end of the line.
+By seperating the constructor respectively equation by one space, the usual indentation of two spaces is achieved.
+The `where` command for a definition should be on the same line as the declaration, or, if this is not possible, it goes onto the next line with an extra indentation.
 If the right-hand side of an equation has to be broken because it is too long, then it is shifted by one indentation plus one space (to account for the `"`) to the right.
 Linebreaks within the right-hand side recursively add one indentation. 
 
 Example:
+```isabelle
+datatype 'a list =
+  Nil |
+  Cons 'a "'a list"
+
+function list_update :: "'a list ⇒ nat ⇒ 'a ⇒ 'a list" where
+"list_update [] i v = []" |
+"list_update (x # xs) i v = (
+   case i of
+     0 ⇒ v # xs |
+     Suc j ⇒ x # list_update xs j v
+   )"
+```
+or alternatively:
 ```isabelle
 datatype 'a list =
   Nil
@@ -128,10 +147,10 @@ datatype 'a list =
 function list_update :: "'a list ⇒ nat ⇒ 'a ⇒ 'a list" where
   "list_update [] i v = []"
 | "list_update (x # xs) i v = (
-    case i of
-      0 ⇒ v # xs
-    | Suc j ⇒ x # list_update xs j v
-    )"
+     case i of
+       0 ⇒ v # xs
+     | Suc j ⇒ x # list_update xs j v
+     )"
 ```
 
 ## Locales
