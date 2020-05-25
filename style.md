@@ -12,7 +12,7 @@ title: Style
 - Use one blank line to separate top-level declarations such as theorems, definitions, datatype declarations, etc. You can group together several closely related top-level declarations by omitting the blank line. You may put two blank lines around contexts that are delimited by `begin` and `end`.
 
 ### "Do Nots"
-- Do not use indexed access to fact collections, e.g. `algebra_simps(3)`.
+- Do not use indexed access to dynamic fact collections, e.g. `algebra_simps(8)` or `derivative_intros(3)`.
 - In procedural proofs, try to not apply tactics in the middle of a proof if they do not close a goal and do not give raise to a normal form.
 
 ## Comments
