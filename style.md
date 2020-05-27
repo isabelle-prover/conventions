@@ -119,7 +119,7 @@ qed
 ## Datatype and function definitions
 While each equation of a function definition must be on a separate line, a datatype declaration may be put on a single line if it is short enough.
 The separating `|` between several equations is either consistently put at the beginning of the line without indentation or at the end of the line.
-By seperating the constructor respectively equation by one space, the usual indentation of two spaces is achieved.
+In case of the former, separate the constructor respectively equation by one space to obtain the usual indentation of two spaces.
 The `where` command for a definition should be on the same line as the declaration, or, if this is not possible, it goes onto the next line with an extra indentation.
 If the right-hand side of an equation has to be broken because it is too long, then it is shifted by one indentation plus one space (to account for the `"`) to the right.
 Linebreaks within the right-hand side recursively add one indentation. 
