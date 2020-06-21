@@ -3,7 +3,7 @@ title: Isabelle Community Contribution Guidelines
 permalink: /
 ---
 
-This [repository](https://github.com/kappelmann/isabelle_conventions/) contains style guidelines for the development of projects with the [Isabelle](https://isabelle.in.tum.de) proof assistant.
+This [repository](https://github.com/isabelle-prover/conventions) contains style guidelines for the development of projects with the [Isabelle](https://isabelle.in.tum.de) proof assistant.
 
 ## Introduction
 We start with the most important rule: Every commit/pull request must comply with the standards listed in this document.
