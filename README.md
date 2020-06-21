@@ -4,6 +4,8 @@ permalink: /
 ---
 
 This [repository](https://github.com/isabelle-prover/conventions) contains style guidelines for the development of projects with the [Isabelle](https://isabelle.in.tum.de) proof assistant.
+Many of these guidelines have been adapted from the very successful Lean mathlib
+[contribution guidelines](https://github.com/leanprover-community/mathlib//blob/master/docs/contribute/).
 
 ## Introduction
 We start with the most important rule: Every commit/pull request must comply with the standards listed in this document.
@@ -29,7 +31,3 @@ The guidelines cover the following topics:
 ## Get Help and Join The Community
 This [Zulip chat](https://isabelle.zulipchat.com/) is where some of the Isabelle community, in particular the creators of these guidelines, hang out.
 We are always happy to help you and try to answer your questions, no matter if they are basic or advanced.
-
-## Attribution
-Many of these guidelines have been adapted from the very successful Lean mathlib
-[contribution guidelines](https://github.com/leanprover-community/mathlib//blob/master/docs/contribute/).
