@@ -1,5 +1,5 @@
 ---
-title: Isabelle Community Contribution Guidelines
+title: Isabelle Community Conventions
 permalink: /
 ---
 
