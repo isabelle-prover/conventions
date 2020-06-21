@@ -23,8 +23,8 @@ The guidelines cover the following topics:
 - [Session Management](sessions.md)
 - [Committing](commits.md)
 - [Pull-Request Management](pull_requests.md)
-- [Tactics](tactics.md)
-- [ML Documentation](ml_documentation.md)
+<!-- - [Tactics](tactics.md) -->
+<!-- - [ML Documentation](ml_documentation.md) -->
 
 ## Get Help and Join The Community
 This [Zulip chat](https://isabelle.zulipchat.com/) is where some of the Isabelle community, in particular the creators of these guidelines, hang out.
