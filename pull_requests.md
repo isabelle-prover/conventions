@@ -14,7 +14,7 @@ Here are some tips and tricks to make the process of contributing as smooth as p
 2. Discuss your contribution before and while you are working on it.
 Create an issue to discuss your general ideas and questions.
 For more detailed and longer conversations, you could also make use of [Isabelle's Zulip](https://isabelle.zulipchat.com/).
-4. Use `/<path to isabelle>/bin/isabelle build -D .` to check if your project compiles before sending a PR
+4. Use `/<path to isabelle>/bin/isabelle build -vD .` to check if your project compiles before sending a PR
 5. Create a pull request from a feature branch on your personal fork,
    as explained in the link above, or from a branch of the main repository if you have commit access.
 6. If you have made a lot of changes/additions, make many PRs containing small, self-contained
