@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Style | Isabelle Conventions</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Style" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/style.html" />
+<meta property="og:url" content="http://localhost:4000/style.html" />
+<meta property="og:site_name" content="Isabelle Conventions" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Style" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/style.html","headline":"Style","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Isabelle Conventions" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a href="/">
+      <img id="logo" src="/assets/images/Isabelle.jpg" alt="Logo" />
+    </a>
+    <!-- <a class="site-title" rel="author" href="/">Isabelle Conventions</a> -->
+
+
+    <!---->
+      <!-- <nav class="site-nav"> -->
+        <!-- <input type="checkbox" id="nav-trigger" class="nav-trigger" /> -->
+        <!-- <label for="nav-trigger"> -->
+          <!-- <span class="menu-icon"> -->
+            <!-- <svg viewBox="0 0 18 15" width="18px" height="15px"> -->
+              <!-- <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/> -->
+            <!-- </svg> -->
+          <!-- </span> -->
+        <!-- </label> -->
+
+        <!-- <div class="trigger"> -->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/about.html">About</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/commits.html">Commits</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/">Isabelle Community Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/ml_documentation.html">ML documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/naming.html">Naming Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/notation.html">Notation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/pull_requests.html">Isabelle Community Pull Request Management</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/sessions.html">Sessions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/style.html">Style</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/tactics.html">Tactics</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theorem_attributes.html">Theorem Attributes</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theory_documentation.html">Theory Documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+        <!-- </div> -->
+      <!-- </nav> -->
+    <!---->
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Style</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="general-rules">General Rules</h2>
+
+<h3 id="linting">Linting</h3>
+<ul>
+  <li>Lines must not be longer than 100 symbols (as indicated by the blue line in jEdit).</li>
+  <li>Files should not be longer than 1500 lines. While this not a hard limit, exceeding this size limit should be seen as an opportunity to evaluate whether it can be sensibly split up.</li>
+  <li>Punctuation (e.g. <code class="language-plaintext highlighter-rouge">,</code> or <code class="language-plaintext highlighter-rouge">.</code>) is followed by a space. Use spaces around infix operators and between binders (quantifiers, lambdas). If a line has to be broken it is often sensible to put the linebreaks around operators. For a specific operator, it is up to you whether to put it at the end of the line or the beginning of the new line but you should apply your choice consistently.</li>
+  <li>Use two spaces to indent. You can use an extra indent when a long line forces a break to suggest the break is artificial rather than structural.</li>
+  <li>Use one blank line to separate top-level declarations such as theorems, definitions, datatype declarations, etc. You can group together several closely related top-level declarations by omitting the blank line. You may put two blank lines around contexts that are delimited by <code class="language-plaintext highlighter-rouge">begin</code> and <code class="language-plaintext highlighter-rouge">end</code>.</li>
+</ul>
+
+<h3 id="do-nots">“Do Nots”</h3>
+<ul>
+  <li>Do not use indexed access to dynamic fact collections, e.g. <code class="language-plaintext highlighter-rouge">algebra_simps(8)</code> or <code class="language-plaintext highlighter-rouge">derivative_intros(3)</code>.</li>
+  <li>In procedural proofs, try to not apply tactics in the middle of a proof if they do not close a goal and do not give raise to a normal form.</li>
+</ul>
+
+<h2 id="comments">Comments</h2>
+<p>For comments that are not considered part of the literal document, e.g. TODO notes, use ML-style comments <code class="language-plaintext highlighter-rouge">(* ... *)</code>.
+Comment delimiters <code class="language-plaintext highlighter-rouge">― ‹...›</code> are to be used for short inline comments, for example to clarify a proof step.
+For broader comments, like motiviations for definitions, use the <code class="language-plaintext highlighter-rouge">text</code> command. See also <a href="/theory_documentation.html">Theory Documentation</a>.</p>
+
+<h2 id="theorems-and-definitions">Theorems and Definitions</h2>
+<p>The preferred method of stating assumptions is by using explicit <code class="language-plaintext highlighter-rouge">assumes</code> clauses;
+however, this is just a suggestion.
+You are free to state your assumptions using meta level implication if it reduces textual noise
+or simplifies the proof body.</p>
+
+<p>If you use <code class="language-plaintext highlighter-rouge">assumes</code>, the theorem name must always be followed by a linebreak.
+Furthermore, the <code class="language-plaintext highlighter-rouge">show</code> must be on a separate line from the assumptions.
+You can put multiple short assumptions in one line at a time.
+Facts should be labelled with semantically meaningful names. If the fact is short enough, however, fact quoting should be preferred instead.
+Here is a valid example:</p>
+<pre><code class="language-isabelle">theorem C_if_complicated_B_if_A:
+    assumes A and complicated_if_A: "A ⟹  complicated B"
+    and c_if_complicated: "complicated B ⟹ C"
+    shows C
+      using ‹A› oops
+</code></pre>
+
+<p>If you prove involved existential statements or case distinctions you should write down the theorem using <code class="language-plaintext highlighter-rouge">obtains</code>, e.g:</p>
+<pre><code class="language-isabelle">theorem empty_or_infinite_if_card_eq_0:
+  assumes "card A = 0"
+  obtains (empty) "A = {}" | (infinite) B where "B ⊆ A" "¬ finite B"
+    oops
+</code></pre>
+
+<h2 id="proofs">Proofs</h2>
+<p>The <code class="language-plaintext highlighter-rouge">proof</code>, <code class="language-plaintext highlighter-rouge">next</code>, and <code class="language-plaintext highlighter-rouge">qed</code> commands are flushed to the left with respect to the current indentation block.</p>
+<pre><code class="language-isabelle">theorem nat_add_comm: "(n :: nat) + m = m + n"
+proof (induction n)
+  case 0
+  then show ?case sorry
+next
+  case (Suc n)
+  then show ?case sorry
+qed
+</code></pre>
+<p>A <code class="language-plaintext highlighter-rouge">from</code> / <code class="language-plaintext highlighter-rouge">have</code> / <code class="language-plaintext highlighter-rouge">using</code> / <code class="language-plaintext highlighter-rouge">unfolding</code> / <code class="language-plaintext highlighter-rouge">by</code> combination can be put on the same line.
+If you need more than two lines, then <code class="language-plaintext highlighter-rouge">from</code> and <code class="language-plaintext highlighter-rouge">have</code> should be aligned while the <code class="language-plaintext highlighter-rouge">using</code> / <code class="language-plaintext highlighter-rouge">unfolding</code> / <code class="language-plaintext highlighter-rouge">by</code> commands are aligned to one extra indentation with respect to the <code class="language-plaintext highlighter-rouge">have</code> block. 
+If you have to break within one of the blocks, add another extra indentation.</p>
+
+<p>When arguments themselves are long enough to require line breaks, use an additional indent for the new lines.</p>
+
+<p>Here is an example:</p>
+<pre><code class="language-isabelle">lemma pigeonhole_if_infinite_domain:
+  assumes inf_domain: "infinite A"
+  and finite_range: "finite (f`A)"
+  shows "∃ a ∈ A. infinite {a' ∈ A. f a' = f a}"
+using finite_range inf_domain
+proof (induction "f`A" arbitrary: A rule: finite_induct)
+  case empty
+  then show ?case by simp
+next
+  case (insert b F)
+  ― ‹the pre-image of b›
+  let ?Pb = "{a ∈ A. f a = b}"
+  show ?case
+  proof (cases "finite ?Pb")
+    case True
+    with ‹infinite A› have "infinite (A - ?Pb)"
+      by simp
+    moreover have "A - ?Pb = {a ∈ A. f a ≠ b}"
+      by blast
+    ultimately have "infinite {a ∈ A. f a ≠ b}"
+      by simp
+    from insert.IH[OF _ this] insert.hyps
+    show ?thesis
+      using rev_finite_subset
+      by blast 
+  next
+    case False
+    then have "?Pb ≠ {}" 
+      by force
+    with False show ?thesis
+      by blast
+  qed
+qed
+</code></pre>
+
+<p>Facts that are crucial to the understanding of a step should be put in the <code class="language-plaintext highlighter-rouge">from</code> clause of a step.
+Auxiliary facts can be put in the trailing using block or passed as tactic arguments.</p>
+
+<h3 id="calculations">Calculations</h3>
+<p>Use calculation proofs when doing transitive reasoning. The transitive operator, <code class="language-plaintext highlighter-rouge">=</code> in the following example, must not be manually aligned:</p>
+<pre><code class="language-isabelle">lemma "((a::nat) + b) + c = c + (b + a)"
+proof -
+  have "(a + b) + c = (b + a) + c"  by simp
+  also have "… = c + (b + a)" by simp
+  finally show ?thesis by simp
+qed
+</code></pre>
+
+<h2 id="datatype-and-function-definitions">Datatype and function definitions</h2>
+<p>While each equation of a function definition must be on a separate line, a datatype declaration may be put on a single line if it is short enough.
+The separating <code class="language-plaintext highlighter-rouge">|</code> between several equations is either consistently put at the beginning of the line without indentation or at the end of the line.
+In case of the former, separate the constructor respectively equation by one space to obtain the usual indentation of two spaces.
+The <code class="language-plaintext highlighter-rouge">where</code> command for a definition should be on the same line as the declaration, or, if this is not possible, it goes onto the next line with an extra indentation.
+If the right-hand side of an equation has to be broken because it is too long, then it is shifted by one indentation plus one space (to account for the <code class="language-plaintext highlighter-rouge">"</code>) to the right.
+Linebreaks within the right-hand side recursively add one indentation.</p>
+
+<p>Example:</p>
+<pre><code class="language-isabelle">datatype 'a list =
+  Nil |
+  Cons 'a "'a list"
+
+function list_update :: "'a list ⇒ nat ⇒ 'a ⇒ 'a list" where
+"list_update [] i v = []" |
+"list_update (x # xs) i v = (
+   case i of
+     0 ⇒ v # xs |
+     Suc j ⇒ x # list_update xs j v
+   )"
+</code></pre>
+<p>or alternatively:</p>
+<pre><code class="language-isabelle">datatype 'a list =
+  Nil
+| Cons 'a "'a list"
+
+function list_update :: "'a list ⇒ nat ⇒ 'a ⇒ 'a list" where
+  "list_update [] i v = []"
+| "list_update (x # xs) i v = (
+     case i of
+       0 ⇒ v # xs
+     | Suc j ⇒ x # list_update xs j v
+     )"
+</code></pre>
+
+<h2 id="locales">Locales</h2>
+<p>The imports of a locale go on the same line as the locale declaration, or, if the line has to be broken, they are indented by one level.
+Here, the <code class="language-plaintext highlighter-rouge">+</code>s that separate the imports always are at the end of the line.
+The <code class="language-plaintext highlighter-rouge">fixes</code>, <code class="language-plaintext highlighter-rouge">defines</code>, and <code class="language-plaintext highlighter-rouge">assumes</code> of a locale are indented by one level as well.
+The initial <code class="language-plaintext highlighter-rouge">begin</code> must always be followed by a blank line and <code class="language-plaintext highlighter-rouge">end</code> must be preceded by a blank line.
+Here are two examples:</p>
+<pre><code class="language-isabelle">locale ex1 = import1 + import2 +
+  fixes a b :: 'a
+  fixes A :: "'a rel"
+  assumes "sym A"
+  assumes "(a, b) ∈ A"
+begin
+
+lemma "(b, a) ∈ A"
+  oops
+
+end
+ 
+
+locale ex2 =
+  import1 +
+  this_is_a_very_long_import +
+  fixes a :: 'a
+begin
+
+lemma "a ∈ UNIV"
+  oops
+
+end
+</code></pre>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <!-- <data class="u-url" href="/"></data> -->
+
+  <div class="wrapper">
+  <p>
+    Something missing? Something broken? Any questions? Create a <a href="https://github.com/isabelle-prover/conventions">pull request or issue</a> to let us know.</br>
+    <a href="/about">About this website</a>
+  </p>
+
+    <!-- <h2 class="footer-heading">Isabelle Conventions</h2> -->
+
+    <!-- <div class="footer-col-wrapper"> -->
+      <!-- <div class="footer-col footer-col-1"> -->
+        <!-- <ul class="contact-list"> -->
+          <!-- <li class="p-name"> -->
+            <!---->
+              <!-- Isabelle Conventions -->
+            <!---->
+            <!-- </li> -->
+            <!---->
+        <!-- </ul> -->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-2"> -->
+        <!--<ul class="social-media-list"></ul>
+-->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-3"> -->
+        <!-- <p></p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</footer>
+</body>
+
+</html>

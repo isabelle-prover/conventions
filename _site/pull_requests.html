@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Isabelle Community Pull Request Management | Isabelle Conventions</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Isabelle Community Pull Request Management" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/pull_requests.html" />
+<meta property="og:url" content="http://localhost:4000/pull_requests.html" />
+<meta property="og:site_name" content="Isabelle Conventions" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Isabelle Community Pull Request Management" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/pull_requests.html","headline":"Isabelle Community Pull Request Management","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Isabelle Conventions" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a href="/">
+      <img id="logo" src="/assets/images/Isabelle.jpg" alt="Logo" />
+    </a>
+    <!-- <a class="site-title" rel="author" href="/">Isabelle Conventions</a> -->
+
+
+    <!---->
+      <!-- <nav class="site-nav"> -->
+        <!-- <input type="checkbox" id="nav-trigger" class="nav-trigger" /> -->
+        <!-- <label for="nav-trigger"> -->
+          <!-- <span class="menu-icon"> -->
+            <!-- <svg viewBox="0 0 18 15" width="18px" height="15px"> -->
+              <!-- <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/> -->
+            <!-- </svg> -->
+          <!-- </span> -->
+        <!-- </label> -->
+
+        <!-- <div class="trigger"> -->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/about.html">About</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/commits.html">Commits</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/">Isabelle Community Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/ml_documentation.html">ML documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/naming.html">Naming Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/notation.html">Notation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/pull_requests.html">Isabelle Community Pull Request Management</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/sessions.html">Sessions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/style.html">Style</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/tactics.html">Tactics</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theorem_attributes.html">Theorem Attributes</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theory_documentation.html">Theory Documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+        <!-- </div> -->
+      <!-- </nav> -->
+    <!---->
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Isabelle Community Pull Request Management</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="creating-a-pull-request">Creating a Pull Request</h2>
+
+<p>We use a standard fork-and-branch workflow. See
+https://blog.scottlowe.org/2015/01/27/using-fork-branch-git-workflow/
+for a good introduction.</p>
+
+<p>Here are some tips and tricks to make the process of contributing as smooth as possible.</p>
+
+<ol>
+  <li>Adhere to the guidelines described in this folder.</li>
+  <li>Discuss your contribution before and while you are working on it.
+Create an issue to discuss your general ideas and questions.
+For more detailed and longer conversations, you could also make use of <a href="https://isabelle.zulipchat.com/">Isabelle’s Zulip</a>.</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">/&lt;path to isabelle&gt;/bin/isabelle build -vD .</code> to check if your project compiles before sending a PR</li>
+  <li>Create a pull request from a feature branch on your personal fork,
+as explained in the link above, or from a branch of the main repository if you have commit access.</li>
+  <li>If you have made a lot of changes/additions, make many PRs containing small, self-contained
+pieces. This helps you get feedback as you go along, and it is much easier to review. This is
+especially important for new contributors.</li>
+  <li>Answer the following three questions in your PR:</li>
+  <li>What: What is this PR about?</li>
+  <li>Why: Why is this PR useful/what is the problem you solve?</li>
+  <li>How: How did you create the feature/solve the problem?</li>
+  <li>Check the code-review checklist below.</li>
+  <li>As for <a href="/commits.html">commits</a>, bugs closed by the PR should be listed on a separate line
+in the footer prefixed with “Closes”.</li>
+</ol>
+
+<h2 id="code-review-checklist">Code-Review Checklist</h2>
+
+<p>When creating or reviewing a pull request, make sure you can tick all boxes of the following checklist:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Check:
+ * [ ] coding style
+ * [ ] documentation
+ * [ ] for tactics:
+     * [ ] tests
+     * [ ] efficiency (make sure at least it's not outrageously inefficient)
+ * [ ] it fits the overall library design
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <!-- <data class="u-url" href="/"></data> -->
+
+  <div class="wrapper">
+  <p>
+    Something missing? Something broken? Any questions? Create a <a href="https://github.com/isabelle-prover/conventions">pull request or issue</a> to let us know.</br>
+    <a href="/about">About this website</a>
+  </p>
+
+    <!-- <h2 class="footer-heading">Isabelle Conventions</h2> -->
+
+    <!-- <div class="footer-col-wrapper"> -->
+      <!-- <div class="footer-col footer-col-1"> -->
+        <!-- <ul class="contact-list"> -->
+          <!-- <li class="p-name"> -->
+            <!---->
+              <!-- Isabelle Conventions -->
+            <!---->
+            <!-- </li> -->
+            <!---->
+        <!-- </ul> -->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-2"> -->
+        <!--<ul class="social-media-list"></ul>
+-->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-3"> -->
+        <!-- <p></p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</footer>
+</body>
+
+</html>

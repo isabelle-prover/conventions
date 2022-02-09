@@ -1,0 +1,19 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 125px;
+}
+
+.site-header {
+  border-top: none;
+  background-image: none;
+  background-color: white;
+  padding: 16px;
+}
+

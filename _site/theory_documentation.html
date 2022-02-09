@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Theory Documentation | Isabelle Conventions</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Theory Documentation" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/theory_documentation.html" />
+<meta property="og:url" content="http://localhost:4000/theory_documentation.html" />
+<meta property="og:site_name" content="Isabelle Conventions" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Theory Documentation" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/theory_documentation.html","headline":"Theory Documentation","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Isabelle Conventions" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a href="/">
+      <img id="logo" src="/assets/images/Isabelle.jpg" alt="Logo" />
+    </a>
+    <!-- <a class="site-title" rel="author" href="/">Isabelle Conventions</a> -->
+
+
+    <!---->
+      <!-- <nav class="site-nav"> -->
+        <!-- <input type="checkbox" id="nav-trigger" class="nav-trigger" /> -->
+        <!-- <label for="nav-trigger"> -->
+          <!-- <span class="menu-icon"> -->
+            <!-- <svg viewBox="0 0 18 15" width="18px" height="15px"> -->
+              <!-- <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/> -->
+            <!-- </svg> -->
+          <!-- </span> -->
+        <!-- </label> -->
+
+        <!-- <div class="trigger"> -->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/about.html">About</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/commits.html">Commits</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/">Isabelle Community Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/ml_documentation.html">ML documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/naming.html">Naming Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/notation.html">Notation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/pull_requests.html">Isabelle Community Pull Request Management</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/sessions.html">Sessions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/style.html">Style</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/tactics.html">Tactics</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theorem_attributes.html">Theorem Attributes</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theory_documentation.html">Theory Documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+        <!-- </div> -->
+      <!-- </nav> -->
+    <!---->
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Theory Documentation</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Documentation is key for the long-term value of a development.
+Without documentation, once a project loses its original maintainer(s), the project virtually dies due to inaccessibility.
+In general, all comments must be written using Isabelle markdown (see <a href="https://isabelle.in.tum.de/documentation.html">Isabelle reference manual</a>).</p>
+
+<h2 id="references">References</h2>
+<p>Every project comes with a <code class="language-plaintext highlighter-rouge">.bib</code> containing the references that were used when developing the theories.
+This file should be placed in the folder <code class="language-plaintext highlighter-rouge">document</code>.
+Those references are then inserted at the appropriate places when documenting the theories (using the antiquation <code class="language-plaintext highlighter-rouge">@cite</code>).</p>
+
+<h2 id="header-documentation">Header Documentation</h2>
+<p>Every file starts with:</p>
+<ul>
+  <li>a comment declaring the author(s) of the file if there is more than one person working on the project</li>
+  <li>the list of imports</li>
+  <li>a file comment containing the general documentation
+in this order.
+Original authors should mark themselves with the <code class="language-plaintext highlighter-rouge">✐‹creator ...›</code> tag.
+Additional (later) contributors should use the <code class="language-plaintext highlighter-rouge">✐‹contributor ...›</code> tag.</li>
+</ul>
+
+<p>The file comment consists of the following sections:</p>
+<ul>
+  <li>the title of the file followed by a summary of the content of the file</li>
+  <li>main definitions (optional; can be covered in the summary)</li>
+  <li>main theorems (optional; can be covered in the summary)</li>
+  <li>notations (if notation is introduced)</li>
+  <li>fact collections and bundles (if relevant fact collections or bundles are introduced)</li>
+  <li>implementation notes (optional; description of important design decisions or interface features, including use of type classes and simp canonical form for new definitions)</li>
+  <li>references (references to textbooks, papers, or Wikipedia pages)</li>
+  <li>tags (a list of keywords that could be useful for search)</li>
+</ul>
+
+<p>The following is an example of a file header:</p>
+<pre><code class="language-isabelle">✐‹creator "Kevin Kappelmann"›
+✐‹contributor "Simon Wimmer"›
+chapter ‹Continued Fractions›
+theory Scratch
+  imports HOL.Archimedean_Field "HOL-Library.Stream"
+begin
+
+paragraph ‹Summary›
+text ‹We define generalised, simple, and regular continued fractions and
+functions to evaluate their convergents. We follow the naming conventions from
+@{cite wikicontinuedfractions} and @{cite wall2018analytic}.›
+
+paragraph ‹Main Definitions›
+text ‹
+▪ Generalised continued fractions (gcfs)
+▪ Simple continued fractions (scfs)
+▪ (Regular) continued fractions ((r)cfs)
+▪ Computation of convergents using the recurrence relation in
+@{const convergents}.
+▪ Computation of convergents by directly evaluating the fraction described by
+the gcf in @{const convergents'}.
+›
+
+paragraph ‹Notations›
+text ‹
+▪ @{term "⌊x⌋"} is the floor for any ‹x› of an integral domain.
+›
+
+paragraph ‹Fact Collections›
+text ‹
+▪ ‹gcf_simps› contains simplification rules for gcfs
+›
+
+paragraph ‹Implementation Notes›
+text ‹
+▪ The most commonly used kind of continued fractions in the literature are
+regular continued fractions. We hence just call them @{const continued_fractions}
+in the library.
+▪ We use streams from @{theory "HOL-Library.Stream"} to encode infinite sequences.
+›
+
+paragraph ‹Tags›
+text ‹numerics, number theory, approximations, fractions›
+</code></pre>
+
+<h2 id="theory-body-documentation-and-sectioning">Theory-Body Documentation and Sectioning</h2>
+<p>Every theory should result in a human-readable file. For this, we document and section theories.
+Regarding the former, all definitions and major theorems are accompanied by a text block (or comment).</p>
+<ul>
+  <li>For definitions, the block should convey the mathematical meaning and motivation.
+For clarity, minor technicalities need not be mentioned (e.g. divisions by zero)</li>
+  <li>For major theorems, the block should address the importance and re-usability of the theorem.</li>
+  <li>When referring to constants (<code class="language-plaintext highlighter-rouge">@const</code>), terms (<code class="language-plaintext highlighter-rouge">@term</code>), types (<code class="language-plaintext highlighter-rouge">@typ</code>), theorems (<code class="language-plaintext highlighter-rouge">@thm</code>) etc., antiquotations must be used. In particular, for constants, <code class="language-plaintext highlighter-rouge">@const</code> must be preferred over <code class="language-plaintext highlighter-rouge">@term</code>.</li>
+</ul>
+
+<p>Moreover, the theory should be sectioned using the <code class="language-plaintext highlighter-rouge">chapter</code>, <code class="language-plaintext highlighter-rouge">section</code>, <code class="language-plaintext highlighter-rouge">subsection</code>, <code class="language-plaintext highlighter-rouge">paragraph</code>, etc. commands.
+If a new section starts at the start of a theory, the corresponding sectioning command should go before the theory header.
+Explanatory text that motivates and guides the user through the theory development should be added.</p>
+
+<p>Example:</p>
+<pre><code class="language-isabelle">paragraph ‹Generalised Continued Fractions›
+
+text ‹
+A ∗‹generalised continued fraction› (gcf) is a potentially infinite expression
+of the form
+
+\begin{equation*}
+h+\cfrac{a_0}
+  {b_0+\cfrac{a_1}
+    {b_1+\cfrac{a_2}
+      {b_2+\cfrac{a_3}
+        {b_3+\dotsb}}}}
+\end{equation*}
+›
+
+(* Above code produces:
+                a₀
+h + ---------------------------
+                  a₁
+      b₀ + --------------------
+                    a₂
+            b₁ + --------------
+                        a₃
+                  b₂ + --------
+                      b₃ + ...
+*)
+
+text ‹where ‹h› is called the ∗‹head term› or ∗‹integer part›, the ‹a⇘is⇙› are
+called the ∗‹partial numerators› and the ‹b⇘is⇙› the ∗‹partial denominators› of the
+gcf. We store the sequence of partial numerators and denominators in a sequence
+of @{term generalized_continued_fraction_pairs} ‹s›.
+For convenience, one often writes ‹[h; (a⇩0, b⇩0), (a⇩1, b⇩1), (a⇩2, b⇩2), …]›.
+›
+definition "generalised_continued_fraction ≡ ..."
+</code></pre>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <!-- <data class="u-url" href="/"></data> -->
+
+  <div class="wrapper">
+  <p>
+    Something missing? Something broken? Any questions? Create a <a href="https://github.com/isabelle-prover/conventions">pull request or issue</a> to let us know.</br>
+    <a href="/about">About this website</a>
+  </p>
+
+    <!-- <h2 class="footer-heading">Isabelle Conventions</h2> -->
+
+    <!-- <div class="footer-col-wrapper"> -->
+      <!-- <div class="footer-col footer-col-1"> -->
+        <!-- <ul class="contact-list"> -->
+          <!-- <li class="p-name"> -->
+            <!---->
+              <!-- Isabelle Conventions -->
+            <!---->
+            <!-- </li> -->
+            <!---->
+        <!-- </ul> -->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-2"> -->
+        <!--<ul class="social-media-list"></ul>
+-->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-3"> -->
+        <!-- <p></p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</footer>
+</body>
+
+</html>

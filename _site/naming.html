@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Naming Conventions | Isabelle Conventions</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Naming Conventions" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/naming.html" />
+<meta property="og:url" content="http://localhost:4000/naming.html" />
+<meta property="og:site_name" content="Isabelle Conventions" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Naming Conventions" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/naming.html","headline":"Naming Conventions","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Isabelle Conventions" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a href="/">
+      <img id="logo" src="/assets/images/Isabelle.jpg" alt="Logo" />
+    </a>
+    <!-- <a class="site-title" rel="author" href="/">Isabelle Conventions</a> -->
+
+
+    <!---->
+      <!-- <nav class="site-nav"> -->
+        <!-- <input type="checkbox" id="nav-trigger" class="nav-trigger" /> -->
+        <!-- <label for="nav-trigger"> -->
+          <!-- <span class="menu-icon"> -->
+            <!-- <svg viewBox="0 0 18 15" width="18px" height="15px"> -->
+              <!-- <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/> -->
+            <!-- </svg> -->
+          <!-- </span> -->
+        <!-- </label> -->
+
+        <!-- <div class="trigger"> -->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/about.html">About</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/commits.html">Commits</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/">Isabelle Community Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/ml_documentation.html">ML documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/naming.html">Naming Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/notation.html">Notation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/pull_requests.html">Isabelle Community Pull Request Management</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/sessions.html">Sessions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/style.html">Style</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/tactics.html">Tactics</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theorem_attributes.html">Theorem Attributes</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theory_documentation.html">Theory Documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+        <!-- </div> -->
+      <!-- </nav> -->
+    <!---->
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Naming Conventions</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="theorem-naming">Theorem Naming</h2>
+<p>Every theorem/lemma must have a unique name.
+Identifiers are generally lower case with underscores.
+However, upper case letters are used if it is standard to capitilise a given identifier (e.g. constructors). 
+For the most part, we rely on descriptive names.
+Often the name of theorem simply describes the syntactic structure of the conclusion:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mul_zero</code></li>
+  <li><code class="language-plaintext highlighter-rouge">mul_one</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sub_add_eq_add_sub</code></li>
+  <li><code class="language-plaintext highlighter-rouge">le_iff_lt_or_eq</code></li>
+  <li><code class="language-plaintext highlighter-rouge">Suc_ne_zero</code></li>
+  <li><code class="language-plaintext highlighter-rouge">prime_5</code></li>
+</ul>
+
+<p>If only a prefix of the description is enough to convey the meaning,
+the name may be made even shorter:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">neg_neg</code></li>
+  <li><code class="language-plaintext highlighter-rouge">pred_Suc</code></li>
+</ul>
+
+<p>Sometimes, to disambiguate the name of a theorem or better convey the
+intended reference, it is necessary to describe some of the
+hypotheses. The word “if” is used to separate these hypotheses:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">lt_if_Suc_le</code></li>
+  <li><code class="language-plaintext highlighter-rouge">lt_if_not_ge</code></li>
+  <li><code class="language-plaintext highlighter-rouge">lt_if_le_if_ne</code></li>
+  <li><code class="language-plaintext highlighter-rouge">add_lt_add_if_lt_if_le</code></li>
+</ul>
+
+<p>Sometimes abbreviations or alternative descriptions are easier to work with.
+For example, we use <code class="language-plaintext highlighter-rouge">pos</code>, <code class="language-plaintext highlighter-rouge">neg</code>, <code class="language-plaintext highlighter-rouge">nonpos</code>, <code class="language-plaintext highlighter-rouge">nonneg</code> rather than
+<code class="language-plaintext highlighter-rouge">zero_lt</code>, <code class="language-plaintext highlighter-rouge">lt_zero</code>, <code class="language-plaintext highlighter-rouge">le_zero</code>, and <code class="language-plaintext highlighter-rouge">zero_le</code>.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mul_pos</code></li>
+  <li><code class="language-plaintext highlighter-rouge">mul_nonpos_if_nonneg_if_nonpos</code></li>
+  <li><code class="language-plaintext highlighter-rouge">add_lt_if_lt_if_nonpos</code></li>
+  <li><code class="language-plaintext highlighter-rouge">add_lt_if_nonpos_if_lt</code></li>
+</ul>
+
+<p>Sometimes the word “left” or “right” is helpful to describe variants
+of a theorem.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">add_le_add_left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">add_le_add_right</code></li>
+  <li><code class="language-plaintext highlighter-rouge">le_if_mul_le_mul_left</code></li>
+  <li><code class="language-plaintext highlighter-rouge">le_if_mul_le_mul_right</code></li>
+</ul>
+
+<p>We can also use the word “self” to indicate a repeated argument:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mul_inv_self</code></li>
+  <li><code class="language-plaintext highlighter-rouge">neg_add_self</code></li>
+</ul>
+
+<p>If a statement is too long, think about creating a definition describing the property.</p>
+
+<h3 id="axiomatic-descriptions">Axiomatic Descriptions</h3>
+
+<p>Some theorems are described using axiomatic names, rather than
+describing their conclusions.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">*_def</code>  (for unfolding a definition)</li>
+  <li><code class="language-plaintext highlighter-rouge">refl</code></li>
+  <li><code class="language-plaintext highlighter-rouge">irrefl</code></li>
+  <li><code class="language-plaintext highlighter-rouge">sym</code></li>
+  <li><code class="language-plaintext highlighter-rouge">trans</code></li>
+  <li><code class="language-plaintext highlighter-rouge">antisym</code></li>
+  <li><code class="language-plaintext highlighter-rouge">asym</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cong</code></li>
+  <li><code class="language-plaintext highlighter-rouge">comm</code></li>
+  <li><code class="language-plaintext highlighter-rouge">assoc</code></li>
+  <li><code class="language-plaintext highlighter-rouge">left_comm</code></li>
+  <li><code class="language-plaintext highlighter-rouge">right_comm</code></li>
+  <li><code class="language-plaintext highlighter-rouge">mul_left_cancel</code></li>
+  <li><code class="language-plaintext highlighter-rouge">mul_right_cancel</code></li>
+  <li><code class="language-plaintext highlighter-rouge">inj</code>  (injective)</li>
+</ul>
+
+<h3 id="names-for-symbols">Names for Symbols</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">imp</code>: implication</li>
+  <li><code class="language-plaintext highlighter-rouge">all</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ex</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ball</code>: bounded forall</li>
+  <li><code class="language-plaintext highlighter-rouge">bex</code>: bounded exists</li>
+</ul>
+
+<h3 id="introduction-elimination-destruction-rules">Introduction, Elimination, Destruction Rules</h3>
+
+<p>Intro, elim, and dest rules are identified by a suffix letter:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">*I</code>: introduction rule</li>
+  <li><code class="language-plaintext highlighter-rouge">*E</code>: elimination rule</li>
+  <li><code class="language-plaintext highlighter-rouge">*D</code>: destruction rule</li>
+</ul>
+
+<h2 id="locale-naming">Locale naming</h2>
+<p>The naming of locales follows the convention in the distribution, i.e. we use <code class="language-plaintext highlighter-rouge">lower_case_snake_case</code>.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <!-- <data class="u-url" href="/"></data> -->
+
+  <div class="wrapper">
+  <p>
+    Something missing? Something broken? Any questions? Create a <a href="https://github.com/isabelle-prover/conventions">pull request or issue</a> to let us know.</br>
+    <a href="/about">About this website</a>
+  </p>
+
+    <!-- <h2 class="footer-heading">Isabelle Conventions</h2> -->
+
+    <!-- <div class="footer-col-wrapper"> -->
+      <!-- <div class="footer-col footer-col-1"> -->
+        <!-- <ul class="contact-list"> -->
+          <!-- <li class="p-name"> -->
+            <!---->
+              <!-- Isabelle Conventions -->
+            <!---->
+            <!-- </li> -->
+            <!---->
+        <!-- </ul> -->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-2"> -->
+        <!--<ul class="social-media-list"></ul>
+-->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-3"> -->
+        <!-- <p></p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</footer>
+</body>
+
+</html>

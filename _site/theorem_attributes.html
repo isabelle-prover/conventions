@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Theorem Attributes | Isabelle Conventions</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Theorem Attributes" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/theorem_attributes.html" />
+<meta property="og:url" content="http://localhost:4000/theorem_attributes.html" />
+<meta property="og:site_name" content="Isabelle Conventions" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Theorem Attributes" />
+<script type="application/ld+json">
+{"@type":"WebPage","url":"http://localhost:4000/theorem_attributes.html","headline":"Theorem Attributes","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Isabelle Conventions" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a href="/">
+      <img id="logo" src="/assets/images/Isabelle.jpg" alt="Logo" />
+    </a>
+    <!-- <a class="site-title" rel="author" href="/">Isabelle Conventions</a> -->
+
+
+    <!---->
+      <!-- <nav class="site-nav"> -->
+        <!-- <input type="checkbox" id="nav-trigger" class="nav-trigger" /> -->
+        <!-- <label for="nav-trigger"> -->
+          <!-- <span class="menu-icon"> -->
+            <!-- <svg viewBox="0 0 18 15" width="18px" height="15px"> -->
+              <!-- <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/> -->
+            <!-- </svg> -->
+          <!-- </span> -->
+        <!-- </label> -->
+
+        <!-- <div class="trigger"> -->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/about.html">About</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/commits.html">Commits</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/">Isabelle Community Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/ml_documentation.html">ML documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/naming.html">Naming Conventions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/notation.html">Notation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/pull_requests.html">Isabelle Community Pull Request Management</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/sessions.html">Sessions</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/style.html">Style</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/tactics.html">Tactics</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theorem_attributes.html">Theorem Attributes</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+            <!-- <a class="page-link" href="/theory_documentation.html">Theory Documentation</a> -->
+            <!---->
+          <!---->
+            <!---->
+            <!---->
+          <!---->
+        <!-- </div> -->
+      <!-- </nav> -->
+    <!---->
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Theorem Attributes</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Attributes modify theorems in various ways in Isabelle.
+Most of the important ones simply add some sort of tag to the theorem that will be picked up by other tools.
+The most common and important ones in Isabelle/HOL are the ones that declare that a theorem should be used by Isabelle’s general-purpose automation:
+<code class="language-plaintext highlighter-rouge">simp</code>, <code class="language-plaintext highlighter-rouge">intro</code>, <code class="language-plaintext highlighter-rouge">dest</code>, <code class="language-plaintext highlighter-rouge">elim</code>, and <code class="language-plaintext highlighter-rouge">iff</code>.</p>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">simp</code> states that a theorem should be used as a rewrite rule (possibly a conditional one) by the simplifier.
+This affects methods such as <code class="language-plaintext highlighter-rouge">simp</code>, <code class="language-plaintext highlighter-rouge">auto</code>, <code class="language-plaintext highlighter-rouge">force</code>, <code class="language-plaintext highlighter-rouge">fastforce</code> that make use of the simplifier.</p>
+  </li>
+  <li>
+    <p>Theorems tagged with <code class="language-plaintext highlighter-rouge">intro</code>, <code class="language-plaintext highlighter-rouge">dest</code>, <code class="language-plaintext highlighter-rouge">elim</code> are used by the <em>classical reasoner</em>.
+This affects methods such as <code class="language-plaintext highlighter-rouge">auto</code>, <code class="language-plaintext highlighter-rouge">blast</code>, <code class="language-plaintext highlighter-rouge">force</code>, <code class="language-plaintext highlighter-rouge">fastforce</code>.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">iff</code> can be applied to theorems stating a logical equivalence and declares that the theorem should be used both by the simplifier and by the classical reasoner.</p>
+  </li>
+</ul>
+
+<p>For more details on this and other attributes, see the <a href="https://isabelle.in.tum.de/dist/doc/isar-ref.pdf">isar-ref</a>.</p>
+
+<p>Anyone developing a theory will have to make the choice of which theorems to declare as <code class="language-plaintext highlighter-rouge">simp</code>, <code class="language-plaintext highlighter-rouge">intro</code> etc.
+These choices can have significant consequences, not only for that theory itself, but also for any work that imports it:
+Well-chosen attributes can make proof automation much smoother with goals disappearing ‘magically’ after applying <code class="language-plaintext highlighter-rouge">auto</code>.
+Poorly chosen attributes, on the other hand, can slow down the automation or even make it loop indefinitely.
+Even the former – ‘goals disappearing magically’ – has the downside that proofs may become more difficult to read and maintain
+since it can become unclear which rules are being applied.
+The provers also have heuristics and search depth thresholds,
+so a proof that works at the very edge of the search threshold may break in a future version of Isabelle.</p>
+
+<p>Choosing attributes well takes experience, so the general advice is:
+Do not declare something as <code class="language-plaintext highlighter-rouge">simp</code>/<code class="language-plaintext highlighter-rouge">intro</code>/etc. unless you are sure that it is a good idea.
+As for more specific guidelines:</p>
+
+<ul>
+  <li>Good automation rules should generally perform relatively obvious steps that do not <em>surprise</em> the user.</li>
+  <li>Classical rules and conditional <code class="language-plaintext highlighter-rouge">simp</code> rules typically involve some sort of backtracking.
+If this backtracking sends the automation down a wrong path, it can slow them down significantly.</li>
+  <li>Any unconditional equation where the left-hand side should clearly be rewritten to the right-hand side should probably be a simp rule (e.g. <code class="language-plaintext highlighter-rouge">x + 0 = x</code>).</li>
+  <li>This also applies for conditional equations as long as the tradeoff between how complicated the precondition, how often the rule can apply syntactically, and how often the rule will actually apply works out (e.g. <code class="language-plaintext highlighter-rouge">x ≠ 0 ⟹ a * x = b * x ⟷ a = b</code>).</li>
+  <li>For distributivity rules of the form <code class="language-plaintext highlighter-rouge">f (g x) = g (f x)</code> or <code class="language-plaintext highlighter-rouge">f (g x) (g y) = g (f x y)</code>, it is not immediately clear which way around they should be applied.
+These <em>can</em> be turned into simp rules, but the choice of whether <code class="language-plaintext highlighter-rouge">f</code> (resp. <code class="language-plaintext highlighter-rouge">g</code>) should be ‘pulled out’ or ‘pushed in’ should be consistent for <em>all</em> simp rules involving <code class="language-plaintext highlighter-rouge">f</code> (resp. <code class="language-plaintext highlighter-rouge">g</code>).</li>
+  <li>The left-hand side of a simp rule should always be fully simplified already; otherwise, it might not get picked up.
+For instance, a rule like <code class="language-plaintext highlighter-rouge">length (x # xs) = length ys</code> might never be applied because the simplifier rewrites <code class="language-plaintext highlighter-rouge">length (x # xs) = length xs + 1</code> first.</li>
+  <li>Good <code class="language-plaintext highlighter-rouge">simp</code> rules are essential for making the proof automation experience smoother.
+Whenever you introduce a new constant, try to prove relevant simple <code class="language-plaintext highlighter-rouge">simp</code> rules.</li>
+  <li>Classic rules (<code class="language-plaintext highlighter-rouge">iff</code>, <code class="language-plaintext highlighter-rouge">intro</code> etc.) are not <em>as</em> important as <code class="language-plaintext highlighter-rouge">simp</code> rules.
+Especially if the reasoning step encoded in the rule is a conceptually nontrivial one (i.e. one that a detailed paper proof would mention),
+it is usually better to apply it explicitly in a proof rather than relying on the automation to do it.</li>
+</ul>
+
+<p>There are various other ‘theorem collections’ with corresponding attributes that work similarly, but have more specific purposes.
+Examples are <code class="language-plaintext highlighter-rouge">continuous_intros</code>, <code class="language-plaintext highlighter-rouge">tendsto_intros</code>, <code class="language-plaintext highlighter-rouge">derivative_intros</code>.
+There is no central documentation for these, but the general rule here is that if these concepts are relevant to your work, you should prove corresponding theorems with the corresponding attribute.
+For example, if you define a new real-valued function, you should prove that it is continuous and declare that theorem as <code class="language-plaintext highlighter-rouge">continuous_intros</code> etc.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <!-- <data class="u-url" href="/"></data> -->
+
+  <div class="wrapper">
+  <p>
+    Something missing? Something broken? Any questions? Create a <a href="https://github.com/isabelle-prover/conventions">pull request or issue</a> to let us know.</br>
+    <a href="/about">About this website</a>
+  </p>
+
+    <!-- <h2 class="footer-heading">Isabelle Conventions</h2> -->
+
+    <!-- <div class="footer-col-wrapper"> -->
+      <!-- <div class="footer-col footer-col-1"> -->
+        <!-- <ul class="contact-list"> -->
+          <!-- <li class="p-name"> -->
+            <!---->
+              <!-- Isabelle Conventions -->
+            <!---->
+            <!-- </li> -->
+            <!---->
+        <!-- </ul> -->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-2"> -->
+        <!--<ul class="social-media-list"></ul>
+-->
+      <!-- </div> -->
+
+      <!-- <div class="footer-col footer-col-3"> -->
+        <!-- <p></p> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  </div>
+</footer>
+</body>
+
+</html>
